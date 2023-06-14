@@ -1,0 +1,439 @@
+@import './reset.scss';
+@import './animate.scss';
+@import './aos.scss';
+@import './variableDefault.scss';
+@import './variableColor.scss';
+@import './form.scss';
+@import './dialog.scss';
+@import './fonts.scss';
+@import './customClass.scss';
+@import './slide.scss';
+@import './swiper.scss'; // vue awesome swiper
+@import './mapBg.scss';
+
+html,
+body {
+    overflow-x: hidden;
+    *::-webkit-scrollbar {
+        // display: none;
+    }
+
+    * {
+        // font-family:$family1;
+        outline: none !important;
+    }
+
+    ::selection {
+        background-color: #c18c68;
+        color: #fff;
+    }
+}
+
+#app {
+    font-family: $family1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    // color: #2c3e50;
+}
+
+.home {
+    // background: $bg;
+    padding-top: $nav_pc_height;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow: hidden; //試底下多的那塊哪來的
+
+    &.no-padding-top {
+        padding-top: 0;
+
+        .fullscreen {
+            height: 100vh;
+        }
+    }
+}
+
+.fullscreen {
+    width: 100vw;
+    height: calc(100vh - #{$nav_pc_height});
+    position: relative;
+    overflow: hidden;
+
+    // 從高度去調整比例，同步調整寬度，求與設計稿比例符合。留白沒關係
+    .fullscreen-container {
+        width: calc((100vh - #{$nav_pc_height}) * (1440 / 900));
+        height: calc(100vh - #{$nav_pc_height});
+        margin: 0 auto;
+        position: relative;
+    }
+}
+
+.full-bg {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.full-img {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+}
+
+.layout-container-fluid {
+    width: 100%;
+}
+
+.layout-container {
+    display: block;
+    max-width: 100% !important;
+}
+
+.col-pc-1 {
+    width: 100%;
+}
+
+.col-pc-2 {
+    width: 50%;
+}
+
+.col-pc-3 {
+    width: 25%;
+}
+
+.col-pc-4 {
+    width: 33.33%;
+}
+
+.col-pc-5 {
+    width: calc(100% * (5 / 12));
+}
+
+.col-pc-6 {
+    width: 50%;
+}
+
+.col-pc-7 {
+    width: calc(100% * (7 / 12));
+}
+
+.col-pc-8 {
+    width: calc(100% * (8 / 12));
+}
+
+.col-pc-9 {
+    width: calc(100% * (9 / 12));
+}
+
+.col-pc-10 {
+    width: calc(100% * (10 / 12));
+}
+
+.col-pc-11 {
+    width: calc(100% * (11 / 12));
+}
+
+.col-pc-12 {
+    width: calc(100% * (12 / 12));
+}
+
+.hidden-pc {
+    display: none !important;
+}
+.hidden-tablet {
+    display: block;
+}
+.hidden-mobile {
+    display: block;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1280px) {
+    .fullscreen {
+        height: auto;
+    }
+}
+@media only screen and (min-width: 1441px) {
+    .layout-container {
+        width: 1368px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+@media only screen and (max-width: 1440px) and (min-width: 1200px) {
+    .layout-container {
+        width: 1141px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media only screen and (max-width: 1199px) and (min-width: 1025px) {
+    .layout-container {
+        width: 980px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .layout-container {
+        width: 100%;
+        // margin-left: 1em !important;
+        // margin-right: 1em !important;
+    }
+}
+
+/* img optimize*/
+img {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* lazy load */
+img[lazy='loading'] {
+    opacity: 0;
+    transition: opacity 1s;
+}
+img[lazy='error'] {
+    /*your style here*/
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+img[lazy='loaded'] {
+    /*your style here*/
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.lazy-bg {
+    transition: opacity 1s;
+    opacity: 0;
+}
+.lazy-bg[lazy='loading'] {
+    opacity: 0;
+}
+.lazy-bg[lazy='error'] {
+    /*your style here*/
+    opacity: 0;
+}
+.lazy-bg[lazy='loaded'] {
+    opacity: 1;
+}
+
+.d-flex {
+    display: flex;
+}
+
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .home.no-padding-top {
+        padding-top: 0;
+
+        .fullscreen {
+            height: 100vh;
+        }
+    }
+    .fullscreen {
+        height: calc(100vh - #{$nav_tablet_height});
+
+        .fullscreen-container {
+            width: calc((100vh - #{$nav_tablet_height}) * (1440 / 900));
+            height: calc(100vh - #{$nav_tablet_height});
+            margin: 0 auto;
+        }
+    }
+
+    .home {
+        padding-top: $nav_tablet_height;
+        background-color: $order_bg_color;
+        background-image: $order_bg_image;
+        background-repeat: no-repeat;
+        background-size: 100vw auto;
+        background-attachment: fixed;
+        background-position: 0% 50%;
+
+        &.no-padding-top {
+            padding-top: 0;
+        }
+    }
+
+    .col-tablet-1 {
+        width: 100%;
+    }
+
+    .col-tablet-2 {
+        width: 50%;
+    }
+
+    .col-tablet-3 {
+        width: 25%;
+    }
+
+    .col-tablet-4 {
+        width: 33.33%;
+    }
+
+    .col-tablet-5 {
+        width: calc(100% * (5 / 12));
+    }
+
+    .col-tablet-6 {
+        width: 50%;
+    }
+
+    .col-tablet-7 {
+        width: calc(100% * (7 / 12));
+    }
+
+    .col-tablet-8 {
+        width: calc(100% * (8 / 12));
+    }
+
+    .col-tablet-9 {
+        width: calc(100% * (9 / 12));
+    }
+
+    .col-tablet-10 {
+        width: calc(100% * (10 / 12));
+    }
+
+    .col-tablet-11 {
+        width: calc(100% * (11 / 12));
+    }
+
+    .col-tablet-12 {
+        width: calc(100% * (12 / 12));
+    }
+
+    .hidden-pc {
+        display: block;
+    }
+    .hidden-tablet {
+        display: none !important;
+    }
+    .hidden-mobile {
+        display: block;
+    }
+}
+
+/* 手機尺寸 */
+@media only screen and (max-width: 767px) {
+    .no-padding-top {
+        padding-top: 0;
+
+        .fullscreen {
+            height: calc(100vh - 63px) !important;
+        }
+    }
+    .fullscreen {
+        height: calc(100vh - #{$nav_phone_height} - 63px) !important;
+        overflow: hidden;
+
+        .fullscreen-container {
+            width: 100vw;
+            min-width: 100vw;
+            height: calc(100vh - #{$nav_phone_height} - 63px);
+            margin: 0 auto;
+        }
+    }
+
+    .home {
+        padding-top: $nav_phone_height;
+        background-color: $order_bg_color;
+        background-image: $order_bg_image_m;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        background-attachment: fixed;
+        background-position: 0% 50%;
+
+        &.no-padding-top {
+            padding-top: 0;
+        }
+
+        // background-color: #fff;
+    }
+
+    .full-bg {
+        height: calc(100vh - 63px);
+    }
+    .full-img {
+        height: calc(100vh - 63px);
+    }
+
+    .col-mobile-1 {
+        width: 100%;
+    }
+
+    .col-mobile-2 {
+        width: 50%;
+    }
+
+    .col-mobile-3 {
+        width: 25%;
+    }
+
+    .col-mobile-4 {
+        width: 33.33%;
+    }
+
+    .col-mobile-5 {
+        width: calc(100% * (5 / 12));
+    }
+
+    .col-mobile-6 {
+        width: 50%;
+    }
+
+    .col-mobile-7 {
+        width: calc(100% * (7 / 12));
+    }
+
+    .col-mobile-8 {
+        width: calc(100% * (8 / 12));
+    }
+
+    .col-mobile-9 {
+        width: calc(100% * (9 / 12));
+    }
+
+    .col-mobile-10 {
+        width: calc(100% * (10 / 12));
+    }
+
+    .col-mobile-11 {
+        width: calc(100% * (11 / 12));
+    }
+
+    .col-mobile-12 {
+        width: calc(100% * (12 / 12));
+    }
+
+    .hidden-pc {
+        display: block;
+    }
+    .hidden-tablet {
+        display: block;
+    }
+    .hidden-mobile {
+        display: none !important;
+    }
+
+    .visible-mobile {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-height: 770px) {
+    .fullscreen {
+        height: auto !important;
+    }
+}

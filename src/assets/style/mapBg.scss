@@ -1,0 +1,77 @@
+@keyframes swing {
+  0% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+.map {
+  position: relative;
+  z-index: 1;
+  .map-bg {
+    width: 100vw;
+    height: auto;
+    position: relative;
+  }
+
+  .hand {
+    display: none;
+  }
+
+  img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .map {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100vw;
+    .map-bg {
+      width: auto;
+      height: 50vh;
+    }
+
+    .map-text {
+      width: auto;
+      height: 100vh;
+    }
+
+    img {
+      width: auto;
+      height: 100vh;
+    }
+
+    .mask {
+      animation: swing 2.5s ease-in-out 0s infinite;
+      left: 35vw;
+    }
+
+    .hand {
+      position: absolute;
+      z-index: 2;
+      display: block;
+      width: 100vw !important;
+      height: auto !important;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      top: 25% !important;
+      display: block;
+      animation: swing 2.5s ease-in-out 0s infinite;
+    }
+  }
+}

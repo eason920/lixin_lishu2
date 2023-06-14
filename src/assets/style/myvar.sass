@@ -1,0 +1,28 @@
+$bp-pc: 769px
+$bp-mb: 768px
+$cw: 500px
+$cwm: 50px
+
+$yellow: #EFAD2C
+
+@mixin fullScreen
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+
+%centerX
+  left: 50%
+  transform: translateX(-50%)
+
+%centerY
+  top: 50%
+  transform: translateY(-50%)
+
+%textShadow
+  text-shadow: 0 0 0.55em rgba(0,0,0,.5), 0 0 0.2em rgba(0,0,0,.8)
+
+%textShadowDeep
+  text-shadow: 0 0 0.55em rgba(0,0,0,.5), 0 0 0.2em rgba(0,0,0,.8)

@@ -1,0 +1,62 @@
+span,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    font-family: inherit;
+    margin: 0;
+    // font-family: 'Noto Sans TC', serif;
+}
+
+h2 {
+    font-family: 'DFLiSongStd';
+    margin: 0;
+    font-weight: normal;
+}
+h3,
+label {
+    font-family: Arial, 'Noto Serif TC', 'Noto Sans TC', sans-serif;
+    margin: 0;
+    //font-weight: bold;
+}
+
+p {
+    font-family: 'Noto Sans TC', serif;
+    // font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica,
+    //   Arial;
+    margin: 0;
+}
+
+/* animate css */
+
+/* font */
+/*
+@font-face {
+    font-family: DFPingJuStd;
+    src: url('~@/assets/font/DFPingJuStd-W7.otf?#iefix') format('embedded-opentype'),
+        url('~@/assets/font/DFPingJuStd-W7.otf');
+}
+
+@font-face {
+    font-family: DFLiSongStd;
+    src: url('~@/assets/font/DFLiSongStd-W5.otf?#iefix') format('embedded-opentype'),
+        url('~@/assets/font/DFLiSongStd-W5.otf');
+}
+
+@font-face {
+    font-family: 'TimesNewRoman';
+    src: url('~@/assets/font/TimesNewRoman.ttf') format('truetype'), url('~@/assets/font/TimesNewRoman.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Impact;
+    src: url('~@/assets/font/Impact.ttf') format('truetype'), url('~@/assets/font/Impact.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
