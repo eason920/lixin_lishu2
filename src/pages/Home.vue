@@ -33,24 +33,24 @@
     <vue-lazy-component class="section" id="section3" @init="init">
       <S3 />
     </vue-lazy-component>
-    <vue-lazy-component class="section" id="section4" @init="init">
+    <!-- <vue-lazy-component class="section" id="section4" @init="init">
       <S4 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section5" @init="init">
+    </vue-lazy-component> -->
+    <!-- <vue-lazy-component class="section" id="section5" @init="init">
       <S5 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section6" @init="init">
+    </vue-lazy-component> -->
+    <!-- <vue-lazy-component class="section" id="section6" @init="init">
       <S6 />
-    </vue-lazy-component>
-    <vue-lazy-component class="section" id="section7" @init="init">
+    </vue-lazy-component> -->
+    <!-- <vue-lazy-component class="section" id="section7" @init="init">
       <S7 />
-    </vue-lazy-component>
+    </vue-lazy-component> -->
     <!--vue-lazy-component class="section" id="section8" @init="init">
       <S8 />
     </vue-lazy-component-->
-    <vue-lazy-component class="section" id="section9" @init="init">
+    <!-- <vue-lazy-component class="section" id="section9" @init="init">
       <S9 />
-    </vue-lazy-component>
+    </vue-lazy-component> -->
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
     </vue-lazy-component>
@@ -77,7 +77,7 @@ import S2 from '@/projects/lishu2/S2.vue'
 import S3 from '@/projects/lishu2/S3.vue'
 import S4 from '@/projects/lishu2/S4.vue'
 import S5 from '@/projects/lishu2/S5.vue'
-import S6 from '@/projects/lishu2/S6.vue'
+// import S6 from '@/projects/lishu2/S6.vue'
 import S7 from '@/projects/lishu2/S7.vue'
 //import S8 from '@/projects/lishu2/S8.vue'
 import S9 from '@/projects/lishu2/S9.vue'
@@ -99,7 +99,7 @@ export default {
     S3,
     S4,
     S5,
-    S6,
+    // S6,
     S7,
     //S8,
     S9

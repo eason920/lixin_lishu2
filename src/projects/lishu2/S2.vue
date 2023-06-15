@@ -1,198 +1,58 @@
 <template>
   <div class="relative">
-    <section id="sec3">
-      <div class="s3box" id="box3">
-        <div class="s3pic">
-          <img v-if="isMobile" src="./S2/bg.jpg" class="basic" />
-          <img v-if="isMobile" src="./S2/bgtm.png" class="float" />
+    <section id="sec2">
+      <div class="title"
+        data-aos-once="false"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="800"
+        v-if="!isMobile"
+      >能住水岸第一排 何必屈就第二排</div>
+      <div class="box" id="box3" v-if="isMobile">
+        <div class="s2pic">
+          <img src="./S2/bg.png" class="basic" />
         </div>
       </div>
-      <div class="s3msg">
-        <div class="s3tbox">
-          <div class="s3t">
-            市心之城<b></b>
-            <p></p>
-          </div>
-          <div class="s3s">中正路、新泰路交匯3000坪角地</div>
-        </div>
-        <div class="s3p">
-          坐落新莊最熱鬧的繁華雙大道，地段價值湧現，優勢的總價帶，北市上班，下班住最安全的新房子，坐享大都市咫尺繁華，更奢侈悠遊於超凡格局，北台灣最優越CP值地段，戶戶珍稀，席席爭藏。
-        </div>
+      <div class="pc_pic" v-else
+        data-aos-once="false"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="800"
+      >
+        <img src="./S2/bg.png" />
+      </div>
+      <div class="title" v-if="isMobile"
+        data-aos-once="false"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="800"
+      >能住水岸第一排 何必屈就第二排</div>
+      <div class="msg"
+        data-aos-once="false"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="800"
+      >
+        <div>景觀的價值性，在於土地的稀有性，</div>
+        <div>放眼大直經驗，近30年來水岸第一排的建案價格，
+        <span>超過非首排個案價格高達66%！</span></div>
+        <div>
+        雙北同時擁有綠地水岸公園的「大都會水岸特區」，
+        <span>【萊茵水花園】以景觀頭等艙的姿態，</span></div>
+        <div>對位大直水岸，超越大安森林，<span>升等水岸第一排尊榮生活，讓資產看得到未來。</span></div>
       </div>
       <div v-if="isMobile" id="fingerbox">
-        <img
-          class="finger"
-          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABJCAYAAACuPXHDAAAACXBIWXMAABYlAAAWJQFJUiTwAAAErElEQVR4nO2cv3LTQBDGvzCpGGbkki4u6G2eIE5FGfMEVloazBMQnoA00OI8AaGkQn4ClCdAfgLkGUpmjrnMKuxsJFmK7p9kfzOa2JYs636629vdW+VIKYUWiunQVZsv9VCt23ncEuIXep0BSAYKccbaicYwdY9ssMXqv1YNv9PnbcXaGzdpxwFi9dYK5gGiIZi+Ic6UUkvapn2G6QviXCmVqYfKCG7vYPqAGJcAlJr3DaZriOMSaIlSKhWf5UqpUZ9guoSotysBi9vFmYC5DBBkJczCIX8D4BO9/k5O6KyjY1vmsE/Z60sAqTj+GsCC3uvfv6o4x6jjtXWRZvMcwCty3J8C+FxQlkPLhMruZsLOWzap8FGRNDhHCEp5j/xNf/8CuAXwx9PdzhockzY4xraeAZhQiH3HrgD5moaW3vmChlUIF1ympeffnxKrY+p0mh2e0M6c4OkdER04rT/fXqqAGBGrGbG7B3mAuVuVECFA4gCzUrUQUQISB5gPtBMiKkDiAPNejSCiBiQOMJtDxA6Q2GOYrSCiAUjsIczWENFi8auAWcTPTSKQvipj7WsEsQ1IDhNNT95TPaqdbUAOHSBX63a2BelSp9SglK2j34R6M5tMNj4VEdAF5f4yymMGp9BBSmmw70MsmQkZpHY9zgBcUOZ8y/bpHqrYltGwj2vOZ1Uhg8zJLq4I0JjglukEwDkb/nPXFxvyZCOVE6BfO47TUL8CeMeS05lt37dPIEEwNgQLNPQzikbmbOFM62PJ97+RCTBuY/s22aCkZ3H7+FLYUqli+KdkKoypjyDrlIretq0AO6FjjS3rDg0kqHcWKmAd0SLVmu2LKtbNHyXTIMcUp84CzBDd0HV9YJ8tTPVKUyBH5KroGfUHbT/Jfnnz7Sp0KYa7kRtuAqSGmFEoJ3VCxj3xXGYiZXzN3gRIbWci9n5T4jifCts1OHX1I0fCd7tmQ3lMM2jRU8t6rFRCE0OduhZ3WVHXHsnty1bYw4wafR1IW63KZGRTlSeMCfjEUZty5uY4q1/qCpJHGSdiXYdrSTO5C6U+hn/XoZ0JJ/emwp1IKM4drEzM2jxjXbdcO+jnF02A1OAu2PuIoEm/cajPLt7JVGSzovxfoUmJE57vyMy4VBNXrJVMxtpXwtWZlAznIoFwFFAPNbIqaTppEQuY5yYzLIYkTY4RF8lGGi0WM/lbH2soNbKSlbKVj5xTzF1oZToj3UH8OtamTmoLZC56YRSQ+8NBGqvasJkhT8VMfhrAox0QUY+xELLtPwd5jBLmbmzJRvksC8xZ2u/MlPfgYs0mZv5j5Ll2Zyxyp8ZuqAuQmXCBFh7Xc/iw3vQNJKgXbsR7H+IgjQYELpdjObxzT+7QIECuPPfKKSt1QZ9BQthK19EOXwa5Ne05uAbJnfLIMUz+W70vospFptwVyLkY1saXhn3U/vBGuARZaG0jIPANMnLkU1od1vAEMheVGLZBzkQ0Y6Xiw1dZH08WuABZaG3rOR1fILmNcgnS2vKGL5C8Qbar1PiNGhxILpulLDLbY62EJQQbaVM8nt/YfI7R1+MhskHWs8u2k8lDLMavktWnavcJpD1zAuAfMiguMm+CB/8AAAAASUVORK5CYII="
-          lazy="loaded"
-        />
+        <div>
+          左右滑動觀看
+          <svg class="finger" viewBox="0 0 25 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12.5" cy="19.332" r="6" fill="white"/>
+            <path d="M19.1971 14.8753L19.8077 12.8506C19.92 12.4089 20.2114 12.0192 20.6267 11.7555C20.8506 11.6292 21.1032 11.5483 21.3664 11.5186C21.6297 11.4889 21.8971 11.5111 22.1496 11.5835C22.4105 11.6323 22.6571 11.7288 22.8735 11.8668C23.09 12.0048 23.2716 12.1812 23.4068 12.385C23.542 12.5887 23.6278 12.8151 23.6587 13.0499C23.6896 13.2846 23.665 13.5226 23.5863 13.7484L21.2373 21.5545C20.9959 22.3369 20.6358 23.0865 20.1669 23.783C16.0938 29.9592 6.19469 28.5394 3.32123 21.943C2.60286 20.3385 1.33854 11.297 1.33854 11.297C1.3104 11.0469 1.34537 10.7945 1.44094 10.5579C1.53651 10.3213 1.69028 10.1065 1.89109 9.92916C2.09191 9.75178 2.33474 9.61628 2.60197 9.53238C2.86921 9.44848 3.15416 9.41836 3.43617 9.44416C3.95256 9.44081 4.45144 9.60994 4.83349 9.91789C5.21555 10.2258 5.45275 10.65 5.49787 11.106L6.53232 15.6267L10.6773 1.87354C10.8059 1.4176 11.1336 1.02557 11.5883 0.783767C12.0429 0.541965 12.5874 0.470184 13.1018 0.58417C13.6162 0.698156 14.0584 0.988571 14.3312 1.39157C14.604 1.79458 14.6851 2.27716 14.5565 2.7331L11.4459 13.0416L12.7246 8.79469C12.7907 8.56828 12.9065 8.35565 13.0655 8.16901C13.2245 7.98237 13.4235 7.82541 13.6511 7.70709C13.8787 7.58878 14.1304 7.5114 14.3918 7.47951C14.6532 7.44763 14.9191 7.46184 15.1743 7.52125C15.6891 7.641 16.1295 7.93676 16.3988 8.34374C16.6681 8.75071 16.7444 9.23566 16.611 9.69241L15.3323 13.9457L16.2877 10.7621C16.3557 10.5372 16.4729 10.3264 16.6328 10.1416C16.7926 9.95682 16.992 9.80174 17.2194 9.68526C17.4469 9.56879 17.698 9.49319 17.9585 9.46274C18.2189 9.43228 18.4836 9.44761 18.7373 9.50782C18.9911 9.56802 19.229 9.67189 19.4375 9.81359C19.6459 9.95528 19.8209 10.132 19.9523 10.3336C20.0837 10.5353 20.169 10.7579 20.2034 10.9887C20.2377 11.2195 20.2205 11.4541 20.1525 11.6791L19.8077 12.8379L19.1971 14.8753Z" fill="#004A77" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
       </div>
     </section>
   </div>
 </template>
-
-<style lang="sass" scoped>
-@import "src/assets/style/myvar"
-#sec3
-  // height: 100vh
-.s3box
-
-@media screen and (min-width: $bp-pc)
-  // $area: 300px
-  .s3pic
-    background:
-      image: url(./S2/bg.jpg)
-      size: contain
-      position: 0 100%
-      repeat: no-repeat
-    font-size: 0
-    position: relative
-    width: 100vw
-    height: 56.25vw
-    transition: .1s
-    &:after
-      content: ""
-      position: absolute
-      width: 100%
-      height: 100%
-      left: 0
-      top: 0
-      background:
-        image: url(./S2/bgt.png)
-        size: contain
-
-@media screen and (max-width: $bp-mb)
-  #sec3
-    background:
-      color: #0059a9
-  .s3box
-    overflow:
-      x: scroll
-      y: hidden
-    height: 550 * 100vw / 375
-    position: relative
-  .s3pic
-    position: relative
-    height: 100%
-    img
-      height: 100%
-    .float
-      position: absolute
-      height: 40%
-      left: 210 * 100vw / 375
-      bottom: 5%
-
-// --------------------------------
-// -- msg
-// --------------------------------
-.s3msg
-  position: absolute
-  top: 7vw
-  color: #fff
-  @extend %centerX
-  display: flex
-  flex-direction: column
-  align-items: center
-  justify-content: center
-.s3tbox
-  width: 496px
-.s3t
-  font-size: 100vw * 18 / 1920
-  position: relative
-  width: 70%
-  margin: auto
-  &:after, &:before
-    content: ''
-    position: absolute
-    width: 6px
-    height: 6px
-    border-radius: 50%
-    background: #fff
-    @extend %centerY
-  &:before
-    left: 0
-  &:after
-    right: 0
-  b, p
-    // @extend %centerY
-    top: 50%
-    height: 1px
-    width: calc(50% - 55px)
-    background-color: #fff
-    position: absolute
-  b
-    left: 0
-  p
-    right: 0
-
-.s3s
-  font:
-    size:100vw * 32 / 1920
-    weight: 700
-  margin: 0.8em 0 1.2em
-
-.s3p
-  font-size:(100vw * 18 / 1920)
-  line-height: 2
-  width:34em
-
-@media screen and (max-width: $bp-mb)
-  .s3pic
-    padding-top: 90px
-  .s3msg
-    top: 40px
-    width: 83%
-  .s3tbox
-    width: 100%
-  .s3t
-    font-size:100vw * 15 / 375
-    width:95%
-    b, p
-      width: calc(50% - 55px)
-
-  .s3s
-    font:
-      size: 100vw * 19 / 375
-    margin: 15px -10% 20px
-    width: 120%
-
-  .s3p
-    font:
-      size: 100vw * 14 / 375
-      weight: lighter
-    width: 100%
-
-// --------------------------------
-// FINGER BOX
-#fingerbox
-  @include fullScreen
-  background: rgba(0,102,153,.6)
-  cursor: ew-resize
-  transform: .3s
-  &.on
-    background: rgba(0,102,153,0)
-    .finger
-      opacity: 0
-
-.finger
-  opacity: 1
-  transform: .2s
-  position: absolute
-  animation: move 2s ease-in-out infinite alternate-reverse
-
-@keyframes move
-  0%
-    transform: translateX(0)
-  to
-    transform: translateX(-50%)
-@media screen and (min-width: $bp-pc)
-  .finger
-    top: 26vw
-    width: 4.2708333333vw
-@media screen and (max-width: $bp-mb)
-  .finger
-    bottom: 35vw
-    width: 20vw
-</style>
 
 <script>
 import $ from 'jquery'
@@ -223,7 +83,7 @@ export default {
       console.log('=========MB=========')
       const $doc = document.getElementById('box3')
       setTimeout(() => {
-        let SL =  80 * $doc.offsetWidth / 100  // 位子換成%
+        let SL =  63 * $doc.offsetWidth / 100  // 位子換成%
         $doc.scrollLeft = SL
 
         // $('#fingerbox').fadeOut()
@@ -236,7 +96,7 @@ export default {
             startX = e.targetTouches[0].pageX
           }
           console.log('touchstart', startX)
-          // $('.s3box').addClass('move')
+          // $('.box').addClass('move')
         })
 
         $('#fingerbox').on('touchmove', e => {
@@ -263,3 +123,93 @@ export default {
   computed: {}
 }
 </script>
+
+<style lang="sass" scoped>
+@import "src/assets/style/myvar"
+.title
+  color: $yellow
+  font-size: 1.3em
+.msg
+  color: #fff
+  font-weight: lighter
+  letter-spacing: 1.5px
+  line-height: 1.6
+  border-style: solid
+  border-color: #fff
+  border-width: 0 1px
+
+@media screen and (min-width: $bp-pc)
+  #sec2
+    @include lish2pcW
+    padding: 8vh 0
+  .pc_pic
+    width: 100%
+    img
+      width: 100%
+  .title
+    margin: 0 0 3vw
+  .msg
+    font-size: 14px
+    margin-top: 3vw
+
+@media screen and (max-width: $bp-mb)
+  #sec2
+    margin-bottom: 20vw
+  .box
+    overflow:
+      x: scroll
+      y: hidden
+    height: 550 * 100vw / 375
+    position: relative
+  .s2pic
+    position: relative
+    height: 100%
+    img
+      height: 100%
+
+  .title
+    margin: 10vw 0 5vw
+  .msg
+    font-size: 14px
+    border: none
+    span
+      display: block
+
+  // --------------------------------
+  // FINGER BOX
+  #fingerbox
+    @include fullScreen
+    bottom: auto
+    height: 147vw
+    background: rgba(0,102,153,.6)
+    cursor: ew-resize
+    display: flex
+    justify-content: center
+    align-items: center
+    &.on
+      background: rgba(0,102,153,0)
+      .finger
+        opacity: 0
+    & > div
+      position: relative
+      color: #fff
+      border-bottom: solid 1px #fff
+      width: 80%
+      padding-bottom: 10px
+
+  .finger
+    position: absolute
+    left: 50%
+    top: 18px
+    width: 8vw
+    opacity: 1
+    // position: absolute
+    animation: move 2s ease-in-out infinite alternate-reverse
+
+  @keyframes move
+    0%
+      transform: translateX(0)
+    to
+      transform: translateX(-50%)
+
+</style>

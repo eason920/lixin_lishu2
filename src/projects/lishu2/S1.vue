@@ -44,7 +44,7 @@
           <img loading="lazy" src="./S1/logo_pc.png" />
         </div>
         <div class="subtitle" data-aos-once="false" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1400">
-          <img loading="lazy" src="./all/subtitle.png" />
+          <img loading="lazy" src="./S1/subtitle_mb.png" />
         </div>
       </div>
     </section>
@@ -108,7 +108,7 @@
       width: 100%
     .bottom_water
       position: absolute
-      bottom: 0
+      bottom: -10px
       img
         width: 100%
 
@@ -126,7 +126,7 @@
       position: center
   .is_mb
     position: relative
-    height: calc(100vw * 443 / 300)
+    height: calc(100vw * 443 / 250)
     z-index: 3
     & > div
       position: absolute
@@ -134,13 +134,14 @@
     img
       width: 100%
     .logo
-      width: 60vw
+      width: 65vw
       left: 4vw
       top: 36vw
     .subtitle
-      width: 81vw
-      left: 10vw
-      bottom: 25vw
+      width: 57vw
+      bottom: 12vw
+      left: 50%
+      transform: translateX(-50%)!important
 
 // ====================================
 // == ball
