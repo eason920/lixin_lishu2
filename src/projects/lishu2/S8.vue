@@ -9,32 +9,27 @@
       >
         <div class="pre" @click="prevBtn"></div>
         <div class="nxt" @click="nextBtn"></div>
-        <swiper v-if="isMobile" :options="swiperOption" ref="swiper8">
+        <swiper :options="swiperOption" ref="swiper8">
           <swiper-slide v-for="item in list" :key="'s8' + item">
             <div class="msg">{{ item }}</div>
           </swiper-slide>
         </swiper>
-        <swiper v-else :options="swiperOption" ref="swiper8">
-          <swiper-slide v-for="item in 2" :key="'s8' + item">
-            <div class="msg">{{ item }}</div>
-          </swiper-slide>
-        </swiper>
       </div>
-      <div class="text" v-if="!isMobile">
+      <div class="text">
         <h2
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="-300"
-        >用世界的語言 歡迎未來三重人</h2>
+        >三面臨路朗闊基地 大尺度面寬對坐水岸</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="-300"
-        >一如全球奢尚高端的星級酒店，華美的挑高大堂，極具現代感的造型沙發，透過親切熱忱的禮賓接待，感受飯店VIP的尊榮禮遇，交誼聽、宴會廳、健身房…穿透花園綠意，瑜珈教室、美式娛樂區、兒童遊戲室、親子書屋構築仕紳名媛質感的招待所氛圍，每一個端景都透著典雅，讓人舒心放鬆的氣息。</p>
+        >【萊茵水花園】717坪水岸景觀頭等艙，外觀快意簡筆的白色框架，將三重水岸輸入國際品味，與層層向上彷若展翅的俐落線條美學，讓水岸飯店的質地，透過當代簡約風格融為一體，藍帶、綠帶交會水岸城市的溫柔光陰與寧靜層次，框聚屬於新世代對未來生活的美好渴望。</p>
         <!-- 2 -->
         <h2
           data-aos-once="false"
@@ -42,55 +37,18 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="-300"
-        >水岸第一排 公園第一景</h2>
+        >水岸新標竿 黃金級綠建築&黃金級智慧建築</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="-300"
-        >
-        公園水岸雙首排，高坪效1~3房空間，大面積開窗，迎向水岸公園第一排景觀包廂，0遮蔽水岸端景視野，從格局配置到採光通風，型塑精緻美型空間一如星級飯店總統套房饗宴，景觀頭等艙、户戶親河力的新貴族輕奢華住居。
-
-
-</p>
-      </div>
-      <div class="text" v-else>
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >用世界的語言 歡迎未來三重人</h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >一如全球奢尚高端的星級酒店，華美的挑高大堂，極具現代感的造型沙發，透過親切熱忱的禮賓接待，感受飯店VIP的尊榮禮遇，交誼聽、宴會廳、健身房…穿透花園綠意，瑜珈教室、美式娛樂區、兒童遊戲室、親子書屋構築仕紳名媛質感的招待所氛圍，每一個端景都透著典雅，讓人舒心放鬆的氣息。</p>
-        <!-- 2 -->
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >水岸第一排 公園第一景</h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >公園水岸雙首排，高坪效1-3房空間，大面積開窗，迎向水岸公園第一排景觀包廂，0遮蔽水岸端景視野，從格局配置到採光通風，型塑精緻美型空間一如星級飯店總統套房饗宴，景觀頭等艙、户戶親河力的新貴族輕奢華住居。
-
-</p>
+        >珍惜地球資源，以人為本思考未來居住的樣貌，【萊茵水花園】樹立三重水岸建築新標竿，預計取得即便在台北市中心亦少見的「黃金級」綠建築標章，與自然循環共享、與生態永續共存，創造社區百年價值；更預計取得「黃金級」智慧建築標章認證，安全、健康、便利、舒適、節能，對位國際一線大城。</p>
       </div>
       <ul class="dot8" v-if="!isMobile">
         <li
-          v-for="item in 2"
+          v-for="item in 3"
           :key="'dot8' + item"
           @click="fnDotChange(item)"
         ></li>
@@ -117,10 +75,9 @@ export default {
   data() {
     return {
       list: [
-        '公設3D示意圖',
-        '公設3D示意圖',
-        '公設3D示意圖',
-        '公設3D示意圖',
+        '外觀合成示意圖',
+        '外觀合成示意圖',
+        '外觀合成示意圖',
         // some
       ],
       vm: this,
@@ -130,12 +87,12 @@ export default {
         loop: true,
         breakpoints: {
           768: {
-            slidesPerView: 1,
-            spaceBetween: 20
+            slidesPerView: 1.3,
+            spaceBetween: 40
           },
           0: {
             slidesPerView: 1.16,
-            spaceBetween: 14
+            spaceBetween: 10
           }
         },
         autoplay: {
@@ -146,8 +103,8 @@ export default {
         on: {
           slideChangeTransitionStart: function() {
             let eq = this.activeIndex
-            if (eq >= 2) {
-              eq = eq - 2
+            if (eq >= 3) {
+              eq = eq - 3
             }
             $('.dot8 li')
               .removeClass('active')
@@ -190,21 +147,17 @@ export default {
 // == TEXT
 // ====================================
 .sec8
-  background: #004A77BB
-
+  // background: #004A77BB
+  z-index:1
 .text
   width: 80vw
   margin: 0 auto
   color: #fff
   line-height: 1.5
-  z-index: 2
   font:
     size: calc(12 * 100vw / 375)
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
   p
     font:
       family: "Noto Sans TC" !important
@@ -245,7 +198,7 @@ export default {
       text-align: right
       justify-content: flex-end
       font:
-        size: 1.63em
+        size: 1.5em
       line-height:1.4
       margin-bottom: .5vw
       padding:
@@ -282,28 +235,31 @@ export default {
     position: 0 0
     size: contain
   position: relative
+
 @media screen and (min-width: $bp-pc)
   .swiper-slide
     background-repeat: no-repeat
-    &:nth-child(1), &:nth-child(3), &:nth-child(5)
+    &:nth-child(1), &:nth-child(4), &:nth-child(7)
       background-image: url('./S8/1.png')
 
-    &:nth-child(2), &:nth-child(4), &:nth-child(6)
+    &:nth-child(2), &:nth-child(5), &:nth-child(8)
       background-image: url('./S8/2.png')
+
+    &:nth-child(3), &:nth-child(6), &:nth-child(9)
+      background-image: url('./S8/3.png')
+
 @media screen and (max-width: $bp-mb)
   .swiper-slide
     background-repeat: no-repeat
-    &:nth-child(1), &:nth-child(5), &:nth-child(9)
-      background-image: url('./S8/m1.png')
+    &:nth-child(1), &:nth-child(4), &:nth-child(7)
+      background-image: url('./S8/1.png')
 
-    &:nth-child(2), &:nth-child(6), &:nth-child(10)
-      background-image: url('./S8/m2.png')
+    &:nth-child(2), &:nth-child(5), &:nth-child(8)
+      background-image: url('./S8/2.png')
 
-    &:nth-child(3), &:nth-child(7), &:nth-child(11)
-      background-image: url('./S8/m3.png')
+    &:nth-child(3), &:nth-child(6), &:nth-child(9)
+      background-image: url('./S8/3.png')
 
-    &:nth-child(4), &:nth-child(8), &:nth-child(12)
-      background-image: url('./S8/m4.png')
 // ====================================
 // == 架構
 // ====================================
@@ -338,24 +294,25 @@ export default {
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 26.5vw // w * 0.562
+    height: 31.5vw // w * 0.562
 
   // w
   .swiper-container
-    width:  80vw
+    // width:  100%
 
   // gurter
-  // .box
-  //   position: relative
-  //   & > div
-  //     padding-left: calc( (100vw - 70vw) / 2 + 20px )
+  .box
+    position: relative
+    & > div
+      padding-left: calc( (100vw - 70vw) / 2 + 20px )
 
 @media screen and (max-width: $bp-mb)
   // h
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 42vw // w * 2.87
+    height: 39.5vw // w * 2.87
+    padding-left: 10.5vw
 
   // w
   .swiper-container
@@ -365,7 +322,7 @@ export default {
   .box
     position: relative
     & > div
-      padding-left: calc( (100vw - 83vw) / 2 + 14px)
+      //padding-left: calc( (100vw - 83vw) / 2 + 14px)
 
 // --------------------------------
 // PRE NEX
@@ -374,6 +331,7 @@ export default {
 
 .pre, .nxt
   display: block
+  display: none
   position: absolute
   width: 0
   padding-left: 18px!important
@@ -415,9 +373,9 @@ export default {
       top: 0
     &:before
       left: 0
-      background-image: linear-gradient(to right, rgba(0,74,119,.8), rgba(0,74,119,0))
+      //background-image: linear-gradient(to right, rgba(0,74,119,.8), rgba(0,74,119,0))
     &:after
-      background-image: linear-gradient(to left, rgba(0,74,119,.8), rgba(0,74,119,0))
+      //background-image: linear-gradient(to left, rgba(0,74,119,.8), rgba(0,74,119,0))
       right: 0
   .pre
     left: $lr
@@ -433,8 +391,9 @@ $w: 10px
     display: flex
     height: 6px
     position: absolute
-    left: 10vw
-    top: 34.3vw
+    left: 50%
+    transform: translateX(-50%)
+    top: 39.2vw
     z-index: 9
     li
       border: solid 1px #fff
@@ -456,12 +415,9 @@ $w: 10px
 // ====================================
 .msg
   position: absolute
-  left: 10px
+  right: 2.5vw
   bottom: 10px
   color: #fff
   font-size: 12px
   text-shadow: 0 0 12px #000, 0 0 5px #000
-@media screen and (min-width: $bp-pc)
-  .msg
-    display: none
 </style>

@@ -1,98 +1,147 @@
 <template>
-  <div class="relative sec7">
+  <div class="relative">
     <section id="sec7">
-      <div class="box"
+      <div
+        v-if="isMobile"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
+        data-aos-offset="0"
+        class="pic"
       >
-        <div class="pre" @click="prevBtn"></div>
-        <div class="nxt" @click="nextBtn"></div>
-        <swiper :options="swiperOption" ref="swiper7">
-          <swiper-slide v-for="item in list" :key="'s7' + item">
-            <div class="msg">{{ item }}</div>
-          </swiper-slide>
-        </swiper>
+        <img src="./S7/title.png"/>
+      </div>
+      <div class="box">
+        <div class="canvas_box"
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+        >
+          <div class="pre" @click="prevBtn"></div>
+          <div class="nxt" @click="nextBtn"></div>
+          <swiper :options="swiperOption" ref="swiper7">
+            <swiper-slide v-for="(item,i) in 3" :key="'s7' + i"></swiper-slide>
+          </swiper>
+          <ul class="dot7" v-if="!isMobile">
+            <li
+              v-for="item in 3"
+              :key="'dot7' + item"
+              @click="fnDotChange(item)"
+            ></li>
+          </ul>
+        </div>
       </div>
       <div class="text">
+        <div
+          v-if="!isMobile"
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+          class="pic"
+        >
+          <img src="./S7/title.png"/>
+        </div>
+        <!-- 1 -->
         <h2
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="-300"
-        >景觀頭等艙 戶戶親河力</h2>
+          data-aos-offset="0"
+        >
+          新美齊物業 成就頂尖名宅尊貴血統
+        </h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="-300"
-        >717坪三面臨路朗闊基地，大尺度面寬對坐水岸，感受自然與城市交織出的寧靜層次，排列組合成一種人們真正想要的的生活想像，藍帶、綠帶交會水岸城市的溫柔光陰，歡迎未來三重人，這個眼界，就是真正的頂尖！</p>
+          data-aos-offset="0"
+        >
+<span>建築門面形象源自頂級物業，新美齊物業111年榮獲優良公寓大廈評選No.1，</span>
+<span>將國外高端物業經驗與美學，導入台北市豪宅，服務金字塔頂端與深具品味高資產客戶，</span>
+<span>將夢想中的生活藍圖，化為真實的幸福與感動，為【萊茵水花園】打造更勝星級旅店的貼心服務，</span>
+<span>不僅享受頂奢質感生活，更能提升建築資產價值。</span>
+        </p>
         <!-- 2 -->
         <h2
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="-300"
-        >水岸新三重 景觀第一排<br>
-          建築經典 才是永恆的時尚</h2>
+          data-aos-offset="0"
+        >CNFlower團隊 升等居家美學品味</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="-300"
-        >建築應該訴說它的時代與場所，同時又嚮往著永恆，外觀快意簡筆的白色框架，將三重水岸輸入國際品味，與層層向上、彷若展翅的俐落線條美學，讓水岸飯店的質地，透過當代簡約風格融為一體，框聚新世代對未來生活的美好渴望。</p>
+          data-aos-offset="0"
+        >
+<span>新東方花藝美學大師「CNFlower」凌宗湧，精準拿捏五感與空間層次的分際，</span>
+<span>屢獲國際政商名流、五星級酒店及精品品牌指定合作，【萊茵水花園】由「CNFlower」團隊，</span>
+<span>妝點端景與香氛，讓花藝綻放空間與人美感互動，回家進入舒心宜人的感官體驗，生活質感全面升級！</span>
+        </p>
+        <!-- 3 -->
+        <h2
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+        >B&B Italia頂級家俬 同步米蘭經典時尚</h2>
+        <p
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+        >
+<span>義大利國寶建築師Antonio Citterio、西班牙設計鬼才Patricia Urquiola、</span>
+<span>普利茲克建築師Zaha Hadid、日本設計大師深澤直人…</span>
+<span>全球最傑出的建築師、設計師、藝術家…跨界合作首選！</span>
+<span>B&B義大利頂級家俬，以獨特的品質和永恆的優雅，成為豪宅空間中少不了的經典身影，</span>
+<span>【萊茵水花園】同步米蘭，回家品味大師經典！</span>
+        </p>
       </div>
-      <ul class="dot7" v-if="!isMobile">
-        <li
-          v-for="item in 3"
-          :key="'dot7' + item"
-          @click="fnDotChange(item)"
-        ></li>
-      </ul>
     </section>
   </div>
 </template>
 
 <script>
+// @ is an alias to /src
 import $ from 'jquery'
 import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
-
-import { isMobile, isTablet } from '@/utils'
+import { isMobile } from '@/utils'
 
 export default {
-  name: 'swiper-example-thumbs-gallery',
-  title: 's4',
+  name: 'section3',
   components: {
     Swiper,
     SwiperSlide
   },
-
   data() {
     return {
-      list: [
-        '大都會公園空拍',
-        '辰光橋實景拍攝',
-        '外觀合成示意圖',
-        // some
-      ],
-      vm: this,
+      bAddClass1: false,
+      bAddClass2: false,
       isMobile,
-      isTablet,
+      vm: this,
       swiperOption: {
         loop: true,
         breakpoints: {
+          // pc
           768: {
-            slidesPerView: 1.3,
-            spaceBetween: 40
+            // slidesPerView: 1.16,
+            spaceBetween: 10
           },
+          // mb
           0: {
-            //slidesPerView: 0,
+            slidesPerView: 1.16,
             spaceBetween: 14
           }
         },
@@ -104,13 +153,23 @@ export default {
         on: {
           slideChangeTransitionStart: function() {
             let eq = this.activeIndex
-            if (eq >= 3) {
-              eq = eq - 3
+            if (!isMobile) {
+              if (eq >= 3) {
+                eq = eq - 3
+              }
+              $('.dot7 li')
+                .removeClass('active')
+                .eq(eq)
+                .addClass('active')
+            } else {
+              if (eq >= 3) {
+                eq = eq - 3
+              }
+              $('.dot7 li')
+                .removeClass('active')
+                .eq(eq)
+                .addClass('active')
             }
-            $('.dot7 li')
-              .removeClass('active')
-              .eq(eq)
-              .addClass('active')
           }
         }
       }
@@ -130,33 +189,45 @@ export default {
         eq = eq - 3
       }
       this.$refs.swiper7.$swiper.slideTo(eq)
+    },
+    fnCCheck(i) {
+      if (i === this.nCurrent) {
+        this.bOn = !this.bOn
+      } else {
+        this.nCurrent = i
+      }
     }
   },
 
   created() {},
-
-  mounted() {},
 
   computed: {}
 }
 </script>
 
 <style lang="sass" scoped>
-@import "src/assets/style/myvar"
+@import src/assets/style/myvar
 @import ./sass/share
-// ====================================
-// == TEXT
-// ====================================
-.sec7
-  background: #004A77BB
-  z-index:1
+
+$g: 5px
+#sec7
+  display: flex
+  align-items: center
+  color: #fff
+  line-height: 1.5
+  font:
+    size: calc(12 * 100vw / 375)
 .text
   width: 80vw
   margin: 0 auto
   color: #fff
   line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
+  .pic
+    width: 18vw
+    margin-bottom: 1vw
+    font-size: 0
+    img
+      width: 100%
   h2
     color: $yellow
     font:
@@ -166,133 +237,146 @@ export default {
     font:
       family: "Noto Sans TC" !important
       weight: 300
+
+.box
+  font-size: 0
+  // overflow: hidden
+
 @media screen and (min-width: $bp-pc)
-  $g: 2vw
-  .text
+  .box
     position: relative
-    width: 70vw
+    width: 37vw
+  .text
+    border-left: solid 1px #fff
+    width: 38vw
+    padding:
+      left: 2vw
     display: flex
-    flex-wrap: wrap
-    // align-content: center
+    flex-direction: column
     justify-content: center
+
+@media screen and (max-width: $bp-mb)
+  .box
+    position: relative
+    width: 100%
+    margin-bottom: 7vw
+
+  .pic
+    width: 45vw
+    margin:
+      left: 5vw
+      bottom: 5vw
+    img
+      width: 100%
+
+// ====================================
+// == CANVAS
+// ====================================
+@mixin effect
+  // border-radius: 3px
+  overflow: hidden
+  position: relative
+  img
+    width: 100%
+    &.float
+      position: absolute
+      left: 0
+      top: 0
+      transform: scale(0)
+      opacity: 0
+      transform-origin: 50% 0
+      &.ani
+        animation: ani .7s linear forwards
+.canvas
+  font-size: 0
+  width: 100%
+  div
+    width: calc( 25% - #{$g})
+    display: inline-block
+    margin:
+      right: $g
+      bottom: $g
+    &:nth-child(4n)
+      margin-right: 0
+    @include effect
+@keyframes ani
+  from
+    transform: scale(0)
+    opacity: 0
+  to
+    transform: scale(1)
+    opacity: 1
+@media screen and (min-width: $bp-pc)
+  #sec7
+    padding: 3vw 10vw 5vw
     line-height: 1.7
     font:
       size: calc(20 * 100vw / 1920)
-    padding-top: $g
-    margin-top: 3vw
-    &:after
-      content: ""
-      position: absolute
-      left: 50%
-      width: 1px
-      top: 0
-      bottom: 0
-      background-color: #fff
-    p, h2
-      width: 50%
-      display: flex
-      align-items: center
-      // margin-bottom: 3vw
-    & > *
-      &:nth-child(1), &:nth-child(2)
-        // margin-top: 5vw
-      &:nth-child(5), &:nth-child(6)
-        margin-bottom: 5vw
+
     h2
-      text-align: right
-      justify-content: flex-end
+      text-align: left
       font:
-        size: 1.63em
-      line-height:1.4
-      margin-bottom: .5vw
-      padding:
-        right: $g
-        bottom: 2vw
+        size: 1.5em
     p
-      display: flex
-      padding:
-        left: $g
-      margin:
-        bottom: 2vw
+      margin-top: 1vw
+      font-size: 12px
+      font-weight: lighter
       text-align: justify
-      letter-spacing: 0vw
+      & + h2
+        margin-top: 1vw
+      span
+        display: block
+
+  $g: 2vw
+@media screen and (max-width: $bp-mb)
+  #sec7
+    flex-direction: column
+    padding: 5vw 0
+    h2
+      font:
+        size: 4vw
+    p
+      margin: 3vw 0 12vw
+      font:
+        size: 3.2vw
+      span
+        display: block
+        text-align: center
+  .canvas0, .canvas
+    margin-bottom: 12vw
+
+// --------------------------------
+// -- SWITCH
+// --------------------------------
+.canvas_box
+  font-size: 0
+  // overflow: hidden
+
+@media screen and (min-width: $bp-pc)
+  .canvas_box
+    width: 37vw
 
 @media screen and (max-width: $bp-mb)
-  .text
-    margin-top: 7vw
-    h2
-      line-height: 1.5
-    p
-      font-size: 3.2vw
-      margin: 4vw 0 10vw
-      &:last-child
-        margin:
-          bottom: 20vw
+  .canvas_box
+    position: relative
 
 // ====================================
-// == SWIPER v
+// == SWIPER W/H
 // ====================================
-
-// 圖片
 .swiper-slide
   background:
     position: 0 0
     size: contain
   position: relative
+  background-repeat: no-repeat
+  &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
+    background-image: url('./S7/3.png')
 
+  &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
+    background-image: url('./S7/1.png')
 
-
-@media screen and (min-width: $bp-pc)  
-  .swiper-slide
-    background-repeat: no-repeat
-    &:nth-child(1), &:nth-child(4), &:nth-child(7)
-      background-image: url('./S7/3.jpg')
-
-    &:nth-child(2), &:nth-child(5), &:nth-child(8)
-      background-image: url('./S7/1.jpg')
-
-    &:nth-child(3), &:nth-child(6), &:nth-child(9)
-      background-image: url('./S7/2.jpg')
-
-@media screen and (max-width: $bp-mb)
-  .swiper-slide
-    background-repeat: no-repeat
-    &:nth-child(1), &:nth-child(4), &:nth-child(7)
-      background-image: url('./S7/1.jpg')
-
-    &:nth-child(2), &:nth-child(5), &:nth-child(8)
-      background-image: url('./S7/2.jpg')
-
-    &:nth-child(3), &:nth-child(6), &:nth-child(9)
-      background-image: url('./S7/3.jpg')
-
-// ====================================
-// == 架構
-// ====================================
-#sec7
-  position: relative
-  display: flex
-  flex-direction: column
-.box
-  font-size: 0
-  overflow: hidden
-
-@media screen and (min-width: $bp-pc)
-  #sec7
-    width: 100vw
-    margin: 0 auto
-    padding:
-      top: 7vw
-      bottom: 7vw
-    position: relative
-
-@media screen and (max-width: $bp-mb)
-  #sec7
-    padding-top: 15vw
-
-// ====================================
-// == SWIPER W/H
-// ====================================
+  &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
+    background-image: url('./S7/2.png')
 .swiper-container
   z-index: 2
 @media screen and (min-width: $bp-pc)
@@ -300,38 +384,53 @@ export default {
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 31.5vw // w * 0.562
+    height: 38.3vw // w * 0.562
 
   // w
   .swiper-container
-    // width:  100%
+    width:  100%
 
-  // gurter
-  .box
-    position: relative
-    & > div
-      padding-left: calc( (100vw - 70vw) / 2 + 20px )
+  .swiper-slide
+    &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
+      background-image: url('./S7/3.png')
+
+    &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
+      background-image: url('./S7/1.png')
+
+    &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
+      background-image: url('./S7/2.png')
 
 @media screen and (max-width: $bp-mb)
   // h
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 50vw // w * 2.87
+    height: 52.3vw // w * 2.87
 
   // w
   .swiper-container
+    padding-left: 11.5vw
     // width: 80vw
 
+  .swiper-slide
+    &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
+      background-image: url('./S7/m1.png')
+
+    &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
+      background-image: url('./S7/m2.png')
+
+    &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
+      background-image: url('./S7/m3.png')
+
   // gurter
-  .box
+  .canvas_box
     position: relative
     & > div
       //padding-left: calc( (100vw - 83vw) / 2 + 14px)
 
 // --------------------------------
 // PRE NEX
-.box
+.canvas_box
   position: relative
 
 .pre, .nxt
@@ -361,12 +460,14 @@ export default {
     image: url("./all/next-btn.png")
 
 @media screen and (min-width: $bp-pc)
+  .canvas_box
+    position: relative
   .pre,.nxt
     display: none
 
 @media screen and (max-width: $bp-mb)
   $lr: 2vw
-  .box
+  .canvas_box
     position: relative
     &:before, &:after
       position: absolute
@@ -386,22 +487,26 @@ export default {
 
   .nxt
     right: $lr
+  .pre,.nxt
+    display: none
 
 // --------------------------------
 // dot
 $w: 10px
 @media screen and (min-width: $bp-pc)
   .dot7
+    position: absolute
+    z-index: 99
+    bottom: -15px
+    left: 50%
+    // left: 1vw
+    transform: translateX(-50%)
     display: flex
     height: 6px
-    position: absolute
-    left: 50%
-    transform: translateX(-50%)
-    top: 37.2vw
-    z-index: 9
     li
       border: solid 1px #fff
       width: 2vw
+      position: relative
       cursor: pointer
       margin-right: .5vw
       &:last-child
@@ -417,11 +522,19 @@ $w: 10px
 // ====================================
 // == msg
 // ====================================
+.gradient
+  position: absolute
+  width: 100%
+  height: 80px
+  bottom: 0
+  background-image: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0))
+
 .msg
   position: absolute
-  left: 10px
+  right: 10px
   bottom: 10px
   color: #fff
   font-size: 12px
-  text-shadow: 0 0 12px #000, 0 0 5px #000
+  text-align: right
+
 </style>
