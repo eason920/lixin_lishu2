@@ -11,7 +11,7 @@
           <div class="pre" @click="prevBtn"></div>
           <div class="nxt" @click="nextBtn"></div>
           <swiper :options="swiperOption" ref="swiper3">
-            <swiper-slide v-for="item in list" :key="'s3' + item">
+            <swiper-slide v-for="(item, i) in list" :key="'s3' + i">
               <div class="gradient"></div>
               <div class="msg">{{ item }}</div>
             </swiper-slide>

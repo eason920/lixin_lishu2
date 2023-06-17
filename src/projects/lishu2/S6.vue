@@ -1,148 +1,73 @@
 <template>
-  <div class="relative sec6">
+  <div class="relative">
     <section id="sec6">
       <div
-        class="box"
+        v-if="isMobile"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
+        data-aos-offset="0"
+        class="pic"
       >
-        <div class="pre" @click="prevBtn"></div>
-        <div class="nxt" @click="nextBtn"></div>
-        <swiper v-if="isMobile" :options="swiperOption" ref="swiper6">
-          <swiper-slide v-for="item in list" :key="'s6' + item">
-            <div class="gradient"></div>
-            <div class="msg">{{ item }}</div>
-          </swiper-slide>
-        </swiper>
-        <swiper v-else :options="swiperOption" ref="swiper6">
-          <swiper-slide v-for="item in 2" :key="'s6' + item"> </swiper-slide>
-        </swiper>
+        <img src="./S6/title.png"/>
       </div>
-      <div class="text" v-if="!isMobile">
-        <h2
+      <div class="box">
+        <div class="canvas_box"
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="-300"
         >
-          國際級的創作 頂尖交會合演的新局
-        </h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >
-          一棟好的建築，需要在美學的格調上做到昇華改變，<br />
-          一棟好的住居，需要在空間的意識上達到泰然優雅，<br />
-          一個好的未來，需要在生活的精神上感到奢華榮耀，<br />
-          以國際級的創作高標，在大都會公園水岸第一排，交會出建築未來新局，用心斟酌水岸天際方寸之間的細節，讓山川水綠風景，成為每一個窗景的完美主角！
-        </p>
-        <!-- 2 -->
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >
-          新美齊物業 星級頂奢服務
-        </h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >
-          引進新美齊物業社區總體營造，透過52週的活動策畫，強化對社區的認同與情感，更在中秋節、聖誕節等，舉辦精彩的慶祝活動，加上對社區生活大小事的專業諮詢與問題排除，讓建築的價值，因生活的品質而歷久彌新，一代帶著下一代的賓至如歸，成為買得起的奢侈品！
-        </p>
-
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >
-          CN Flower 妝點生活美藝
-        </h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="-300"
-        >
-          國際花藝大師凌宗湧的「CN
-          Flower」團隊，深受兩岸政商名流、諸多五星級酒店、及精品品牌指定合作，「萊茵水花園」公共空間之端景，讓花藝綻放空間與人美感互動。
-        </p>
+          <div class="pre" @click="prevBtn"></div>
+          <div class="nxt" @click="nextBtn"></div>
+          <swiper :options="swiperOption" ref="swiper6">
+            <swiper-slide v-for="(item,i) in 3" :key="'s6' + i"></swiper-slide>
+          </swiper>
+        </div>
         <ul class="dot6" v-if="!isMobile">
           <li
-            v-for="item in 2"
+            v-for="item in 3"
             :key="'dot6' + item"
             @click="fnDotChange(item)"
           ></li>
         </ul>
       </div>
+      <div class="text">
+        <div
+          v-if="!isMobile"
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+          class="pic"
+        >
+          <img src="./S6/title.png"/>
+        </div>
+        <h2
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+        >國際級大師集體創作 鑄就水岸景觀地標</h2>
+        <p
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+        >
+        建築名家「陳麗珍」、「高仲廷」建築師，<br />
+        以昇陽系列作品凝鍊環境之美，創作永恆地景；<br /><br />
 
-      <div class="text" v-else>
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-        >
-          國際級的創作 頂尖交會合演的新局
-        </h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-        >
-          一棟好的建築，需要在美學的格調上做到昇華改變，<br />
-          一棟好的住居，需要在空間的意識上達到泰然優雅，<br />
-          一個好的未來，需要在生活的精神上感到奢華榮耀，<br />
-          以國際級的創作高標，在大都會公園水岸第一排，交會出建築未來新局，用心斟酌水岸天際方寸之間的細節，讓山川水綠風景，成為每一個窗景的完美主角！
-        </p>
-        <!-- 2 -->
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-        >
-          新美齊物業 星級頂奢服務
-        </h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-        >
-          引進新美齊物業社區總體營造，透過52週的活動策畫，強化對社區的認同與情感，更在中秋節、聖誕節等，舉辦精彩的慶祝活動，加上對社區生活大小事的專業諮詢與問題排除，讓建築的價值，因生活的品質而歷久彌新，一代帶著下一代的賓至如歸，成為買得起的奢侈品！
-        </p>
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-        >
-          CN Flower 妝點生活美藝
-        </h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-        >
-          國際花藝大師凌宗湧的「CN
-          Flower」團隊，深受兩岸政商名流、諸多五星級酒店、及精品品牌指定合作，「萊茵水花園」公共空間之端景，讓花藝綻放空間與人美感互動。
+        「珩荷空間設計」從紅樹林藍海到三重水岸新區，<br />
+        涵養人文氛圍、敘寫生活樂章；<br /><br />
+
+        「大漢景觀設計」以 北市第一豪宅陶朱隱園的宏觀視野，<br />
+        將園林藝術生活化，打造生活美學的最佳環境。
+
         </p>
       </div>
     </section>
@@ -150,40 +75,35 @@
 </template>
 
 <script>
-import $ from "jquery";
-import { Swiper, SwiperSlide } from "vue-awesome-swiper";
-import "swiper/css/swiper.css";
-
-import { isMobile, isTablet } from "@/utils";
+// @ is an alias to /src
+import $ from 'jquery'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+import { isMobile } from '@/utils'
 
 export default {
-  name: "swiper-example-thumbs-gallery",
-  title: "s6",
+  name: 'section3',
   components: {
     Swiper,
     SwiperSlide
   },
-
   data() {
     return {
-      list: [
-        "物業情境示意圖",
-        "CN Flower作品",
-        "CN Flower作品",
-        "新美齊物業",
-        // some
-      ],
-      vm: this,
+      bAddClass1: false,
+      bAddClass2: false,
       isMobile,
-      isTablet,
+      vm: this,
       swiperOption: {
         loop: true,
         breakpoints: {
+          // pc
           768: {
+            // slidesPerView: 1.16,
             spaceBetween: 10
           },
+          // mb
           0: {
-            //slidesPerView: 0,
+            slidesPerView: 1.16,
             spaceBetween: 14
           }
         },
@@ -194,69 +114,80 @@ export default {
         speed: 800,
         on: {
           slideChangeTransitionStart: function() {
-            let eq = this.activeIndex;
+            let eq = this.activeIndex
             if (!isMobile) {
-              if (eq >= 2) {
-                eq = eq - 2;
+              if (eq >= 3) {
+                eq = eq - 3
               }
-              $(".dot6 li")
-                .removeClass("active")
+              $('.dot6 li')
+                .removeClass('active')
                 .eq(eq)
-                .addClass("active");
+                .addClass('active')
             } else {
-              if (eq >= 5) {
-                eq = eq - 5;
+              if (eq >= 3) {
+                eq = eq - 3
               }
-              $(".dot6 li")
-                .removeClass("active")
+              $('.dot6 li')
+                .removeClass('active')
                 .eq(eq)
-                .addClass("active");
+                .addClass('active')
             }
           }
         }
       }
-    };
+    }
   },
 
   methods: {
     prevBtn() {
-      this.$refs.swiper6.$swiper.slidePrev();
+      this.$refs.swiper6.$swiper.slidePrev()
     },
     nextBtn() {
-      this.$refs.swiper6.$swiper.slideNext();
+      this.$refs.swiper6.$swiper.slideNext()
     },
     fnDotChange(i) {
-      let eq = i - 1;
-      if (eq >= 2) {
-        eq = eq - 2;
+      let eq = i - 1
+      if (eq >= 3) {
+        eq = eq - 3
       }
-      this.$refs.swiper6.$swiper.slideTo(eq);
+      this.$refs.swiper6.$swiper.slideTo(eq)
+    },
+    fnCCheck(i) {
+      if (i === this.nCurrent) {
+        this.bOn = !this.bOn
+      } else {
+        this.nCurrent = i
+      }
     }
   },
 
   created() {},
 
-  mounted() {},
-
   computed: {}
-};
+}
 </script>
 
 <style lang="sass" scoped>
-@import "src/assets/style/myvar"
+@import src/assets/style/myvar
 @import ./sass/share
-// ====================================
-// == TEXT
-// ====================================
-.sec6
-  background: #004A77BB
+
+$g: 5px
+#sec6
+  display: flex
+  color: #fff
+  line-height: 1.5
+  font:
+    size: calc(12 * 100vw / 375)
 .text
   width: 80vw
   margin: 0 auto
   color: #fff
   line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
+  .pic
+    width: 18vw
+    margin-bottom: 2vw
+    img
+      width: 100%
   h2
     color: $yellow
     font:
@@ -266,128 +197,143 @@ export default {
     font:
       family: "Noto Sans TC" !important
       weight: 300
+
+.box
+  font-size: 0
+  // overflow: hidden
+
 @media screen and (min-width: $bp-pc)
-  $g: 2vw
-  .text
+  .box
     position: relative
+    width: 37vw
+  .text
+    border-left: solid 1px #fff
+    width: 35vw
+    padding:
+      left: 3vw
     display: flex
     flex-direction: column
     justify-content: center
+
+@media screen and (max-width: $bp-mb)
+  .box
+    position: relative
+    margin-bottom: 7vw
+
+  .pic
+    width: 45vw
+    margin:
+      left: 5vw
+      bottom: 5vw
+    img
+      width: 100%
+
+// ====================================
+// == CANVAS
+// ====================================
+@mixin effect
+  // border-radius: 3px
+  overflow: hidden
+  position: relative
+  img
+    width: 100%
+    &.float
+      position: absolute
+      left: 0
+      top: 0
+      transform: scale(0)
+      opacity: 0
+      transform-origin: 50% 0
+      &.ani
+        animation: ani .7s linear forwards
+.canvas
+  font-size: 0
+  width: 100%
+  div
+    width: calc( 25% - #{$g})
+    display: inline-block
+    margin:
+      right: $g
+      bottom: $g
+    &:nth-child(4n)
+      margin-right: 0
+    @include effect
+@keyframes ani
+  from
+    transform: scale(0)
+    opacity: 0
+  to
+    transform: scale(1)
+    opacity: 1
+@media screen and (min-width: $bp-pc)
+  #sec6
+    padding: 3vw 10vw 5vw
     line-height: 1.7
     font:
       size: calc(20 * 100vw / 1920)
-    p, h2
-      width: 100%
-      display: flex
-      align-items: center
-      justify-content: flex-start
-      // margin-bottom: 3vw
-    & > *
-      &:nth-child(1), &:nth-child(2)
-        // margin-top: 5vw
-      &:nth-child(5), &:nth-child(6)
-        //margin-bottom: 5vw
+
     h2
-      text-align: right
+      text-align: left
       font:
-        size: 1.63em
-      line-height:1.4
-      margin-bottom: .5vw
+        size: 1.5em
     p
-      padding:
-        bottom: 2vw
+      margin-top: 1.5vw
       text-align: justify
-      letter-spacing: 0vw
+      & + h2
+        margin-top: 2vw
+      span
+        display: block
+
+  $g: 2vw
+@media screen and (max-width: $bp-mb)
+  #sec6
+    flex-direction: column
+    padding: 5vw 0
+    h2
+      font:
+        size: 4vw
+      span
+        display: block
+        text-align: center
+    p
+      margin: 3vw 0 12vw
+      font:
+        size: 3.2vw
+  .canvas0, .canvas
+    margin-bottom: 12vw
+
+// --------------------------------
+// -- SWITCH
+// --------------------------------
+.canvas_box
+  font-size: 0
+  overflow: hidden
+
+@media screen and (min-width: $bp-pc)
+  .canvas_box
+    width: 37vw
 
 @media screen and (max-width: $bp-mb)
-  .text
-    margin-top: 7vw
-    h2
-      line-height: 1.5
-    p
-      font-size: 3.2vw
-      margin: 4vw 0 10vw
-      &:last-child
-        margin:
-          bottom: 20vw
+  .canvas_box
+    position: relative
 
 // ====================================
-// == SWIPER v
+// == SWIPER W/H
 // ====================================
-
-// 圖片
 .swiper-slide
   background:
     position: 0 0
     size: contain
   position: relative
+  background-repeat: no-repeat
+  &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
+    background-image: url('./S6/3.png')
 
-@media screen and (min-width: $bp-pc)
-  .swiper-slide
-    background-repeat: no-repeat
-    &:nth-child(1), &:nth-child(3), &:nth-child(5)
-      background-image: url('./S6/1.png')
+  &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
+    background-image: url('./S6/1.png')
 
-    &:nth-child(2), &:nth-child(4), &:nth-child(6)
-      background-image: url('./S6/2.png')
-@media screen and (max-width: $bp-mb)
-  .swiper-slide
-    background-repeat: no-repeat
-    &:nth-child(1), &:nth-child(5), &:nth-child(9)
-      background-image: url('./S6/m1.jpg')
-
-    &:nth-child(2), &:nth-child(6), &:nth-child(10)
-      background-image: url('./S6/m2.jpg')
-
-    &:nth-child(3), &:nth-child(7), &:nth-child(11)
-      background-image: url('./S6/m4.jpg')
-
-    &:nth-child(4), &:nth-child(8), &:nth-child(12)
-      background-image: url('./S6/m5.jpg')
-
-// ====================================
-// == 架構
-// ====================================
-#sec6
-  position: relative
-  display: flex
-.box
-  font-size: 0
-  overflow: hidden
-
-@media screen and (min-width: $bp-pc)
-  #sec6
-    width: 80vw
-    margin: 0 auto
-    padding:
-      top: 7vw
-      bottom: 7vw
-    position: relative
-    &:after
-      content: ""
-      position: absolute
-      left: 50%
-      width: 1px
-      top: 7vw
-      bottom: 7vw
-      background-color: #fff
-  .box
-    width: 37vw
-    // height: 34.4vw
-    img
-      width: 100%
-  .text
-    width: 44vw
-    padding:
-      left: 7vw
-@media screen and (max-width: $bp-mb)
-  #sec6
-    flex-direction: column
-    padding-top: 15vw
-
-// ====================================
-// == SWIPER W/H
-// ====================================
+  &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
+    background-image: url('./S6/2.png')
 .swiper-container
   z-index: 2
 @media screen and (min-width: $bp-pc)
@@ -395,32 +341,53 @@ export default {
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 34.4vw // w * 0.562
+    height: 38.3vw // w * 0.562
 
-  // // w
+  // w
   .swiper-container
     width:  100%
+
+  .swiper-slide
+    &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
+      background-image: url('./S6/3.png')
+
+    &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
+      background-image: url('./S6/1.png')
+
+    &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
+      background-image: url('./S6/2.png')
 
 @media screen and (max-width: $bp-mb)
   // h
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 56vw // w * 2.87
+    height: 52.3vw // w * 2.87
 
   // w
   .swiper-container
+    padding-left: 11.5vw
     // width: 80vw
 
+  .swiper-slide
+    &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
+      background-image: url('./S6/m1.png')
+
+    &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
+      background-image: url('./S6/m2.png')
+
+    &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
+      background-image: url('./S6/m3.png')
+
   // gurter
-  .box
+  .canvas_box
     position: relative
     & > div
       //padding-left: calc( (100vw - 83vw) / 2 + 14px)
 
 // --------------------------------
 // PRE NEX
-.box
+.canvas_box
   position: relative
 
 .pre, .nxt
@@ -450,12 +417,14 @@ export default {
     image: url("./all/next-btn.png")
 
 @media screen and (min-width: $bp-pc)
+  .canvas_box
+    position: relative
   .pre,.nxt
     display: none
 
 @media screen and (max-width: $bp-mb)
   $lr: 2vw
-  .box
+  .canvas_box
     position: relative
     &:before, &:after
       position: absolute
@@ -475,17 +444,22 @@ export default {
 
   .nxt
     right: $lr
+  .pre,.nxt
+    display: none
 
 // --------------------------------
 // dot
 $w: 10px
 @media screen and (min-width: $bp-pc)
   .dot6
+    position: absolute
+    z-index: 99
+    bottom: -15px
+    left: 50%
+    // left: 1vw
+    transform: translateX(-50%)
     display: flex
     height: 6px
-    margin:
-      top: 4vw
-      bottom: 0 !important
     li
       border: solid 1px #fff
       width: 2vw
@@ -508,14 +482,16 @@ $w: 10px
 .gradient
   position: absolute
   width: 100%
-  height: 10vw
+  height: 80px
   bottom: 0
   background-image: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0))
 
 .msg
   position: absolute
-  left: 10px
+  right: 10px
   bottom: 10px
   color: #fff
   font-size: 12px
+  text-align: right
+
 </style>
