@@ -8,7 +8,7 @@ function resolve(dir) {
 
 module.exports = {
   publicPath: process.env.NODE_ENV === "production" ? "/" : "/", // for php
-  // publicPath: process.env.NODE_ENV === 'production' ? '/lixin_lishu/dist/' : '/', // for github
+  // publicPath: process.env.NODE_ENV === 'production' ? '/lixin_lishu2/dist/' : '/', // for github
   configureWebpack: {
     resolve: {
       alias: {
