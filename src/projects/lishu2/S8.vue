@@ -10,7 +10,7 @@
         <div class="pre" @click="prevBtn"></div>
         <div class="nxt" @click="nextBtn"></div>
         <swiper :options="swiperOption" ref="swiper8">
-          <swiper-slide v-for="item in list" :key="'s8' + item">
+          <swiper-slide v-for="(item, i) in list" :key="'s8' + i">
             <div class="msg">{{ item }}</div>
           </swiper-slide>
         </swiper>

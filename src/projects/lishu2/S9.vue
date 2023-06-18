@@ -19,13 +19,21 @@
           data-aos-delay="0"
           data-aos-duration="800"
         >
-          <div class="pre" @click="prevBtn"></div>
-          <div class="nxt" @click="nextBtn"></div>
-          <swiper :options="swiperOption" ref="swiper9">
-            <swiper-slide v-for="(item,i) in 2" :key="'s9' + i"></swiper-slide>
+          <div v-if="!isMobile">
+            <swiper v-if="isPcAnimate" :options="swiperOption" ref="swiper9">
+              <swiper-slide v-for="(item,i) in list" :key="'s9' + i">
+                <div v-if="isMobile" class="msg">{{ item }}</div>
+              </swiper-slide>
+            </swiper>
+            <img v-else class="pcpic" src="./S9/1.png" />
+          </div>
+          <swiper v-else :options="swiperOption" ref="swiper9">
+            <swiper-slide v-for="(item,i) in list" :key="'s9' + i">
+              <div v-if="isMobile" class="msg">{{ item }}</div>
+            </swiper-slide>
           </swiper>
         </div>
-        <ul class="dot9" v-if="!isMobile">
+        <ul v-if="isPcAnimate" class="dot9">
           <li
             v-for="item in 2"
             :key="'dot9' + item"
@@ -51,7 +59,7 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >國際級大師集體創作 鑄就水岸景觀地標</h2>
+        >結構工學堅若磐石 安心家園品質承諾</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
@@ -59,14 +67,9 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-        建築名家「陳麗珍」、「高仲廷」建築師，<br />
-        以昇陽系列作品凝鍊環境之美，創作永恆地景；<br /><br />
-
-        「珩荷空間設計」從紅樹林藍海到三重水岸新區，<br />
-        涵養人文氛圍、敘寫生活樂章；<br /><br />
-
-        「大漢景觀設計」以 北市第一豪宅陶朱隱園的宏觀視野，<br />
-        將園林藝術生活化，打造生活美學的最佳環境。
+超越建築法規要求，以蓋超高樓層建築相同之嚴謹，<br/>
+送交結構外審，透過第三方公正單位把關，打造安心御邸；<br/>
+精密隔熱砂漿工法，恆久節能有效降低室內溫度，<span>5年防水保固，專注方吋細節滴水不漏，確保居家生活品質。</span>
 
         </p>
       </div>
@@ -89,6 +92,11 @@ export default {
   },
   data() {
     return {
+      isPcAnimate: false,
+      list: [
+        '防水保固示意圖',
+        '結構工學示意圖'
+      ],
       bAddClass1: false,
       bAddClass2: false,
       isMobile,
@@ -292,13 +300,13 @@ $g: 5px
     h2
       font:
         size: 4vw
-      span
-        display: block
-        text-align: center
     p
       margin: 3vw 0 12vw
       font:
         size: 3.2vw
+      span
+        display: block
+        text-align: center
   .canvas0, .canvas
     margin-bottom: 12vw
 
@@ -312,6 +320,8 @@ $g: 5px
 @media screen and (min-width: $bp-pc)
   .canvas_box
     width: 37vw
+  .pcpic
+    width: 100%
 
 @media screen and (max-width: $bp-mb)
   .canvas_box
@@ -351,7 +361,7 @@ $g: 5px
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 52.3vw // w * 2.87
+    height: 45.3vw // w * 2.87
 
   // w
   .swiper-container
@@ -466,19 +476,12 @@ $w: 10px
 // ====================================
 // == msg
 // ====================================
-.gradient
-  position: absolute
-  width: 100%
-  height: 80px
-  bottom: 0
-  background-image: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,0))
-
 .msg
   position: absolute
-  right: 10px
+  right: 2.5vw
   bottom: 10px
   color: #fff
   font-size: 12px
-  text-align: right
+  text-shadow: 0 0 12px #000, 0 0 5px #000
 
 </style>

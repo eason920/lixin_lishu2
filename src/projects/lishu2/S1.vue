@@ -1,8 +1,9 @@
 <template>
   <div class="relative">
     <section id="sec2">
-      <!-- <ball class="ball is1" /> -->
-      <!-- <ball2 class="ball iS1" /> -->
+      <ball class="ball is1" />
+      <ball2 class="ball is2" />
+      <ball class="ball is3" />
       <!-- PC -->
       <div class="is_pc" v-if="!isMobile">
         <div class="logo" data-aos-once="false" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1400">
@@ -175,29 +176,24 @@
     // transform-origin: 0 0
 @media screen and (min-width: $bp-pc)
   .ball
-    &.is1
-      width: 45px
-      height: 45px
-      left: 8.5vw
-      top: calc(50% + 3.8vw)
-    &.iS1
-      width: 47px
-      height: 47px
-      left: 38vw
-      top: 20vw
-      top: calc(50% - 8.5vw)
+    display: none
 @media screen and (max-width: $bp-mb)
   .ball
     &.is1
-      width: 25px
-      height: 25px
+      width: 10px
+      height: 10px
       left: 8vw
-      top: 60vw
-    &.iS1
+      bottom: 60vw
+    &.is2
+      width: 15px
+      height: 15px
+      right: 42vw
+      bottom: 50vw
+    &.is3
       width: 25px
       height: 25px
-      left: 42vw
-      top: 25vw
+      right: 8vw
+      bottom: 66vw
 
 </style>
 

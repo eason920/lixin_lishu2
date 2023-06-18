@@ -51,6 +51,12 @@
     <vue-lazy-component class="section" id="section9" @init="init">
       <S9 />
     </vue-lazy-component>
+    <vue-lazy-component class="section" id="section10" @init="init">
+      <S10 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section10" @init="init">
+      <S11 />
+    </vue-lazy-component>
     <vue-lazy-component class="section" id="contact">
       <ContactSection />
     </vue-lazy-component>
@@ -81,6 +87,8 @@ import S6 from '@/projects/lishu2/S6.vue'
 import S7 from '@/projects/lishu2/S7.vue'
 import S8 from '@/projects/lishu2/S8.vue'
 import S9 from '@/projects/lishu2/S9.vue'
+import S10 from '@/projects/lishu2/S10.vue'
+import S11 from '@/projects/lishu2/S11.vue'
 
 export default {
   name: 'home',
@@ -102,7 +110,9 @@ export default {
     S6,
     S7,
     S8,
-    S9
+    S9,
+    S10,
+    S11
   },
 
   data() {
@@ -132,40 +142,6 @@ export default {
         $('<img>')
           .on('load', imageLoaded)
           .attr('src', $(img).attr('src'))
-      })
-
-      let start = 0;
-      let end = 0;
-      setTimeout(()=>{
-        const h1 = $("#section1").height();
-        const h2 = $("#section2").height();
-        const h3 = $("#section3").height();
-        const h4 = $("#section4").height();
-        const h5 = $("#section5").height();
-        const h6 = $("#section6").height();
-        const h7 = $("#section7").height();
-        start = h1 + h2;
-        end = start + h3 + h4 + h5 + h6 + h7;
-        console.log("h1 is", h1, ' / h2 is ', h2, ' / start is ', start, ' / end is ', end);
-      }, 1000);
-      $(window).scroll(()=>{
-        const st = $(window).scrollTop();
-        // console.log(st);
-        switch(true){
-          case st < start:
-            // console.log("< start, absoulte start");
-            $('.sbg').removeAttr('style').css('top', start);
-            break;
-          case st >= start && st < end:
-            // console.log('fixed');
-            $('.sbg').removeAttr('style').css({'position': 'fixed', 'top': 0});
-            break;
-          case st >= end:
-            // console.log("> end, absolute end");
-            $('.sbg').removeAttr('style').css('top', end);
-            break;
-          default:
-        }
       })
     })
   },

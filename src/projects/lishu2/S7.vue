@@ -247,15 +247,19 @@ $g: 5px
     position: relative
     width: 37vw
   .text
+    margin: 0
+    margin-left: 3.5vw
     border-left: solid 1px #fff
-    width: 38vw
+    width: 39vw
     padding:
-      left: 2vw
+      left: 3.5vw
     display: flex
     flex-direction: column
     justify-content: center
 
 @media screen and (max-width: $bp-mb)
+  #sec7
+    align-items: flex-start
   .box
     position: relative
     width: 100%
@@ -265,7 +269,7 @@ $g: 5px
     width: 45vw
     margin:
       left: 5vw
-      bottom: 5vw
+      bottom: 4vw
     img
       width: 100%
 
