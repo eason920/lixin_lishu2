@@ -72,7 +72,6 @@ export default {
 
 <style lang="sass" scoped>
 @import "src/assets/style/myvar"
-@import ./sass/share
 // ====================================
 // == TEXT
 // ====================================

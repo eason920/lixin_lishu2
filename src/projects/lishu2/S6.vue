@@ -169,7 +169,6 @@ export default {
 
 <style lang="sass" scoped>
 @import src/assets/style/myvar
-@import ./sass/share
 
 $g: 5px
 #sec6

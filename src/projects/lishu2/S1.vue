@@ -54,7 +54,6 @@
 
 <style lang="sass" scoped>
 @import "src/assets/style/myvar"
-@import ./sass/share
 
 @media screen and (min-width: $bp-pc)
   #sec2

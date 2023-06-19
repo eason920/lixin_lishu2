@@ -132,7 +132,7 @@ export default {
 <style lang="scss" scoped>
 @import "@/assets/style/variableColor.scss";
 @import "@/assets/style/variableDefault.scss";
-@import "@/projects/lishu2/sass/share.sass";
+@import "@/assets/style/myvar.sass";
 
 .contact-info {
   background: $contact_bg;

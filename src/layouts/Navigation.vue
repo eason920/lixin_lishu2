@@ -95,7 +95,6 @@ export default {
 
 <style lang="sass" scoped>
 @import "@/assets/style/myvar"
-@import ../projects/lishu2/sass/share
 // nav
 %text
   text-decoration: none
