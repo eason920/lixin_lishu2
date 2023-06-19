@@ -113,8 +113,8 @@ export default {
           $doc.scrollLeft = SL + move
         })
 
-        $('#fingerbox').on('touchend', e => {
-          $('#fingerbox').remove()
+        $('#fingerbox').on('touchstart', e => {
+          $('#fingerbox').fadeOut()
         })
       }, 1000)
     }
