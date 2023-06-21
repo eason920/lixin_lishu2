@@ -199,7 +199,6 @@ export default {
   cursor: pointer;
   text-decoration: none;
   color: #fff;
-  background: #d1b373;
   // box-shadow: $contact_btn_border;
   transition: all 0.5s;
   position: relative;
@@ -252,12 +251,14 @@ export default {
   width: 600px;
   height: 60px;
   letter-spacing: 0;
-  background-color: rgba(0,0,0,.85);
+  background-color: rgba(0,0,0,.5);
   // box-shadow: $contact_btn_border;
-  border-radius: 0;
   border: 1px solid #fff;
+  border-radius: 0;
+  border-right: 0;
   font-family: $family4;
   color: #fff;
+  font-size: 15PX;
   + .google-btn,
   + .btn {
     border-radius: 0;
@@ -268,15 +269,15 @@ export default {
   width: 280px;
   height: 60px;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   cursor: pointer;
   text-decoration: none;
   color: #fff;
+  background-color: rgba(0, 53, 85, 0.6);
   // background: #d1b373;
-  background-position: center !important;
-  background-color: #003555;
   // background-image: linear-gradient(180deg, #BDE5FF 0%, #83B9D5 47.92%, #002B43 100%);
   // box-shadow: #d1b373;
+  border:1px solid #fff;
   transition: all 0.5s;
 
   svg {

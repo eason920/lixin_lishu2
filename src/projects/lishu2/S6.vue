@@ -1,17 +1,14 @@
 <template>
   <div class="relative">
     <section id="sec6">
-      <div
+      <h3
         v-if="isMobile"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
-        data-aos-offset="0"
-        class="pic"
-      >
-        <img src="./S6/title.png"/>
-      </div>
+        data-aos-offset="0"><span class="en">ELITE TEAM</span>
+        <img loading="lazy" src="./S1/logo.png" /></h3>
       <div class="box">
         <div class="canvas_box"
           data-aos-once="false"
@@ -34,17 +31,14 @@
         </ul>
       </div>
       <div class="text">
-        <div
-          v-if="!isMobile"
+        <h3
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-          class="pic"
-        >
-          <img src="./S6/title.png"/>
-        </div>
+          v-if="!isMobile"><span class="en">ELITE TEAM</span>
+          <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           data-aos-once="false"
           data-aos="fade-up"
@@ -174,9 +168,18 @@ $g: 5px
 #sec6
   display: flex
   color: #fff
-  line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
+h3
+  text-align: left
+  letter-spacing: 0.03em
+  line-height: 1.35
+  margin-bottom: 1.5em
+  .en
+    font-size: 2.78em
+  img
+    display: block
+    width: 13em
+    margin: .2em 0 0 0
+    transform: scale3d(1,1,1.1)
 .text
   width: 80vw
   margin: 0 auto
@@ -189,13 +192,6 @@ $g: 5px
       width: 100%
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
-  p
-    font:
-      family: "Noto Sans TC" !important
-      weight: 300
 
 .box
   font-size: 0
@@ -226,6 +222,14 @@ $g: 5px
       bottom: 5vw
     img
       width: 100%
+  h3
+    margin:
+      left: 5vw
+      bottom: 5vw
+    .en
+      font-size: 2.15em
+    img
+      width: 10.2em
 
 // ====================================
 // == CANVAS
@@ -268,8 +272,6 @@ $g: 5px
   #sec6
     padding: 3vw 10vw 5vw
     line-height: 1.7
-    font:
-      size: calc(20 * 100vw / 1920)
 
     h2
       text-align: left
@@ -289,15 +291,11 @@ $g: 5px
     flex-direction: column
     padding: 5vw 0
     h2
-      font:
-        size: 4vw
       span
         display: block
         text-align: center
     p
       margin: 3vw 0 12vw
-      font:
-        size: 3.2vw
   .canvas0, .canvas
     margin-bottom: 12vw
 

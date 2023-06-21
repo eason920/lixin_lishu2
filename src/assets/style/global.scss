@@ -44,6 +44,9 @@ body {
     background-position: top;
     background-repeat: no-repeat;
     overflow: hidden; //試底下多的那塊哪來的
+    font-size: calc(19 * 100vw / 1920);
+    font-weight: 300;
+    line-height: 1.6;
 
     &.no-padding-top {
         padding-top: 0;
@@ -53,6 +56,7 @@ body {
         }
     }
 }
+
 
 .fullscreen {
     width: 100vw;
@@ -354,6 +358,7 @@ img[lazy='loaded'] {
         // background-size: cover;
         background-attachment: fixed;
         background-position: 0% 50%;
+        font-size: calc(12 * 100vw / 375);
 
         &.no-padding-top {
             padding-top: 0;

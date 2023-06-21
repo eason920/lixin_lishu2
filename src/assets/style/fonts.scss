@@ -5,34 +5,20 @@ h2,
 h3,
 h4,
 h5,
-p {
+p,
+label{
     font-family: inherit;
     margin: 0;
     // font-family: 'Noto Sans TC', serif;
 }
-
-h2 {
-    font-family: 'DFLiSongStd';
-    margin: 0;
-    font-weight: normal;
-}
-h3,
-label {
-    font-family: Arial, 'Noto Serif TC', 'Noto Sans TC', sans-serif;
-    margin: 0;
-    //font-weight: bold;
-}
-
-p {
-    font-family: 'Noto Sans TC', serif;
-    // font-family: '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', Helvetica,
-    //   Arial;
-    margin: 0;
-}
-
 /* animate css */
 
 /* font */
+@font-face {
+    font-family: "traja";
+    src: url('~@/assets/font/TrajanPro-Bold.otf') format('embedded-opentype'),
+        url('~@/assets/font/TrajanPro-Bold.otf');
+}
 /*
 @font-face {
     font-family: DFPingJuStd;

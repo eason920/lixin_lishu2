@@ -7,7 +7,9 @@
       <!-- PC -->
       <div class="is_pc" v-if="!isMobile">
         <div class="logo" data-aos-once="false" data-aos="fade-up" data-aos-delay="0" data-aos-duration="1400">
-          <img loading="lazy" src="./S1/logo_pc.png" />
+          <span class="en"><b>RHINE</b><br />RIVER</span>
+          <img class="img" loading="lazy" src="./S1/logo.png" />
+          <img class="t" loading="lazy" src="./S1/t.png" />
         </div>
         <div class="title">
           <div
@@ -63,7 +65,7 @@
     min-height: calc(100vw * 900 / 1920)
     max-height: calc(100vw * 1080 / 1920)
     background:
-      image: url(./S1/bg_pc.png)
+      image: url(./S1/bg.jpg)
       size: cover
       color: #004A77
       position: 0
@@ -74,10 +76,44 @@
     .logo
       position: absolute
       width: 35vw
-      left: 12vw
-      top: calc(50% - 13vw)
+      left: 13vw
+      top: calc(50% - 12.5vw)
+      color:#FFF
+      filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.25))
       img
         width: 100%
+      .en
+        position: absolute
+        top:0
+        left: 0
+        text-align: left
+        font:
+          size: 4.9em
+        letter-spacing: -0.01em
+        line-height: 1.14
+        b
+          font:
+            size:1.09em
+      .img
+        position: absolute
+        top: 7.2em
+        left: 16.85em
+        width: 16em
+      .t
+        position: absolute
+        top: 12.65em
+        left: 0.5em
+        width: 20em
+      &::after
+        content: ""
+        background: #FFF
+        height: 2px
+        width: 11.5em
+        position: absolute
+        top: 13.95em
+        left: 21.4em
+
+        
     .title
       position: absolute
       bottom: 0
@@ -120,7 +156,7 @@
 @media screen and (max-width: $bp-mb)
   #sec2
     background:
-      image: url(./S1/bg_mb.png)
+      image: url(./S1/bgm.jpg)
       size: cover
       color: #004A77
       position: center

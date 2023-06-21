@@ -167,78 +167,23 @@
     box-shadow: 0 0 24px rgb(0 0 0 / 20%);
 }
 
-.decor {
-    overflow: hidden;
-    animation: rotate1 4s ease-in-out infinite;
-    transition: all 0.5s;
-
-    .decor-shine {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        
-        background-repeat: no-repeat;
-        background-position: top -50vw right -50vw;
-        animation: shine 4s infinite;
-    }
-
-    .decor-mask {
-        
-        background-size: cover;
-        background-position: 0 0;
-        transition: all 0.4s;
-        position: absolute;
-
-        img {
-            visibility: hidden;
-        }
-    }
-
-    .decor-bg {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-}
-
 .en {
-    font-family: 'TimesNewRoman';
-}
-
-.dash {
-    color: #b58463;
-    margin-right: 0.5rem;
+    font-family: 'traja';
 }
 
 .work-c {
     display: block !important;
 }
-
-@keyframes rotate1 {
-    0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(2deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+.text h2,
+.title{font-size: 1.53em;
+    font-weight: 600;
 }
-
-@keyframes shine {
-    0% {
-        background-position: top -50vw right -50vw;
-    }
-    100% {
-        background-position: top 50vw right 50vw;
-    }
+.text p,
+.msg{
+    font-family: $family2;
 }
-
+.font-traja{
+    font-family:traja;}
 /* 螢幕尺寸標準 */
 /* 平板尺寸 */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -321,5 +266,8 @@
     .work-c {
         text-align: center !important;
         margin-bottom: 12px;
+    }
+    .text h2,
+    .title{font-size: 1.25em;
     }
 }

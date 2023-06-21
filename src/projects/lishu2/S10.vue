@@ -19,16 +19,14 @@
         </div>
       </div>
       <div class="text">
-        <div
+        <h3
+          v-if="!isMobile"
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="0"
-          class="pic"
-        >
-          <img src="./S10/title.png"/>
-        </div>
+          data-aos-offset="0"><span class="en">GLOBAL BOUTIQUE</span>
+          <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           v-if="!isMobile"
           data-aos-once="false"
@@ -44,9 +42,9 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-<span>永大防疫電梯結合SHARP空氣清淨機，確保乘梯安全。</span>
+<span>Panasonic全自動馬桶，自動掀蓋自動洗淨，乾淨又方便。</span>
 <span>日本nanoe™奈米水離子發生器，淨化梯廳空間空氣品質。</span>
-<span>公設空間配備AED心臟去顫器，緊急關鍵時刻的守護神。</span>
+<span>德國Bosch洗碗機，極智科技聰明省水輕鬆解決洗碗差事。</span>
 <span>英國STUDOR排水防疫系統、居家空氣清新無臭無蟲害。</span>
 <span>Honeywell智慧型反逆洗過濾器，全面提升居家用水品質。</span>
 <span>櫻花廚下淨水器，打開水龍頭隨時滿足居家生飲洗滌用水。</span>
@@ -121,9 +119,6 @@ $g: 5px
 #sec3
   display: flex
   color: #fff
-  line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
   &::before
     position: absolute
     content: ""
@@ -134,7 +129,7 @@ $g: 5px
     bottom: 0
     left: 0
 .text
-  width: 80vw
+  width: 90vw
   margin: 0 auto
   color: #fff
   line-height: 1.5
@@ -143,15 +138,20 @@ $g: 5px
     margin-bottom: 3vw
     img
       width: 100%
+  h3
+    text-align: left
+    letter-spacing: 0.03em
+    line-height: 1.35
+    margin-bottom: 1.5em
+    .en
+      font-size: 1.86em
+    img
+      display: block
+      width: 13em
+      margin: .2em 0 0 0
+      transform: scale3d(1,1,1.1)
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
-  p
-    font:
-      family: "Noto Sans TC" !important
-      weight: 300
 
 .box
   font-size: 0
@@ -241,13 +241,9 @@ p
   #sec3
     padding: 3vw 10vw 5vw
     line-height: 1.7
-    font:
-      size: calc(20 * 100vw / 1920)
 
     h2
       text-align: left
-      font:
-        size: 1.63em
     p
       margin: 1.5vw 0 0vw
       text-align: justify
@@ -262,15 +258,11 @@ p
     flex-direction: column
     padding: 5vw 0
     h2
-      font:
-        size: 4.2vw
       span
         display: block
         text-align: center
     p
       margin: 3vw 0 12vw
-      font:
-        size: 3.2vw
   .canvas0, .canvas
     // margin-bottom: 12vw
 

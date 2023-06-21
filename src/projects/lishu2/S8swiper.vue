@@ -113,25 +113,25 @@ export default {
   .swiper-slide
     background-repeat: no-repeat
     &:nth-child(1), &:nth-child(4), &:nth-child(7)
-      background-image: url('./S8/1.png')
+      background-image: url('./S8/1.jpg')
 
     &:nth-child(2), &:nth-child(5), &:nth-child(8)
-      background-image: url('./S8/2.png')
+      background-image: url('./S8/2.jpg')
 
     &:nth-child(3), &:nth-child(6), &:nth-child(9)
-      background-image: url('./S8/3.png')
+      background-image: url('./S8/3.jpg')
 
 @media screen and (max-width: $bp-mb)
   .swiper-slide
     background-repeat: no-repeat
     &:nth-child(1), &:nth-child(4), &:nth-child(7)
-      background-image: url('./S8/1.png')
+      background-image: url('./S8/1.jpg')
 
     &:nth-child(2), &:nth-child(5), &:nth-child(8)
-      background-image: url('./S8/2.png')
+      background-image: url('./S8/2.jpg')
 
     &:nth-child(3), &:nth-child(6), &:nth-child(9)
-      background-image: url('./S8/3.png')
+      background-image: url('./S8/3.jpg')
 
 // ====================================
 // == SWIPER W/H

@@ -62,10 +62,10 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-<span>建築門面形象源自頂級物業，新美齊物業111年榮獲優良公寓大廈評選No.1，</span>
-<span>將國外高端物業經驗與美學，導入台北市豪宅，服務金字塔頂端與深具品味高資產客戶，</span>
-<span>將夢想中的生活藍圖，化為真實的幸福與感動，為【萊茵水花園】打造更勝星級旅店的貼心服務，</span>
-<span>不僅享受頂奢質感生活，更能提升建築資產價值。</span>
+建築門面形象源自頂級物業，新美齊物業111年榮獲優良公寓大廈評選No.1，<br />
+將國外高端物業經驗與美學，導入台北市豪宅，服務金字塔頂端與深具品味高資產客戶，<br />
+將夢想中的生活藍圖，化為真實的幸福與感動，為【萊茵水花園】打造更勝星級旅店的貼心服務，<br />
+不僅享受頂奢質感生活，更能提升建築資產價值。
         </p>
         <!-- 2 -->
         <h2
@@ -82,9 +82,9 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-<span>新東方花藝美學大師「CNFlower」凌宗湧，精準拿捏五感與空間層次的分際，</span>
-<span>屢獲國際政商名流、五星級酒店及精品品牌指定合作，【萊茵水花園】由「CNFlower」團隊，</span>
-<span>妝點端景與香氛，讓花藝綻放空間與人美感互動，回家進入舒心宜人的感官體驗，生活質感全面升級！</span>
+新東方花藝美學大師「CNFlower」凌宗湧，精準拿捏五感與空間層次的分際，<br />
+屢獲國際政商名流、五星級酒店及精品品牌指定合作，【萊茵水花園】由「CNFlower」團隊，<br />
+妝點端景與香氛，讓花藝綻放空間與人美感互動，回家進入舒心宜人的感官體驗，生活質感全面升級！
         </p>
         <!-- 3 -->
         <h2
@@ -100,12 +100,9 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >
-<span>義大利國寶建築師Antonio Citterio、西班牙設計鬼才Patricia Urquiola、</span>
-<span>普利茲克建築師Zaha Hadid、日本設計大師深澤直人…</span>
-<span>全球最傑出的建築師、設計師、藝術家…跨界合作首選！</span>
-<span>B&B義大利頂級家俬，以獨特的品質和永恆的優雅，成為豪宅空間中少不了的經典身影，</span>
-<span>【萊茵水花園】同步米蘭，回家品味大師經典！</span>
+        >義大利國寶建築師Antonio Citterio、西班牙設計鬼才Patricia Urquiola、<br />
+        普利茲克建築師Zaha Hadid、日本設計大師深澤直人…全球最傑出的建築師、設計師、藝術家…跨界合作首選！B&B義大利頂級家俬，以獨特的品質和永恆的優雅，成為豪宅空間中少不了的經典身影，<br />
+        【萊茵水花園】同步米蘭，回家品味大師經典！
         </p>
       </div>
     </section>
@@ -214,8 +211,6 @@ $g: 5px
   align-items: center
   color: #fff
   line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
 .text
   width: 80vw
   margin: 0 auto
@@ -229,13 +224,6 @@ $g: 5px
       width: 100%
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
-  p
-    font:
-      family: "Noto Sans TC" !important
-      weight: 300
 
 .box
   font-size: 0
@@ -313,17 +301,11 @@ $g: 5px
   #sec7
     padding: 3vw 10vw 5vw
     line-height: 1.7
-    font:
-      size: calc(20 * 100vw / 1920)
 
     h2
       text-align: left
-      font:
-        size: 1.5em
     p
       margin-top: 1vw
-      font-size: 12px
-      font-weight: lighter
       text-align: justify
       & + h2
         margin-top: 1vw
@@ -335,13 +317,8 @@ $g: 5px
   #sec7
     flex-direction: column
     padding: 5vw 0
-    h2
-      font:
-        size: 4vw
     p
       margin: 3vw 0 12vw
-      font:
-        size: 3.2vw
       span
         display: block
         text-align: center

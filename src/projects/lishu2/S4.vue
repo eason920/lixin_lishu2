@@ -14,7 +14,8 @@
         data-aos-delay="0"
         data-aos-duration="800"
       >
-        <img src="./S4/bg.png" />
+        <img src="./S4/map.jpg" />
+        <img src="./S4/img.png" />
         <div class="gradient"></div>
         <div class="mm">黃金四角正核心</div>
       </div>
@@ -30,9 +31,12 @@
         data-aos-delay="0"
         data-aos-duration="800"
       >
-        <div>「大都會水岸特區」環擁雙北國家級重磅建設，<span>東以一橋之距與台北雙星特區共好共榮，</span></div>
-        <div>跨步南向新北第二行政中心，打造三重新市政特區，<span>串聯西側新北產業園區以及新莊副都心，繁華隨享，</span></div>
-        <div>連通北面銀河灣計畫，水岸觀光娛樂醫療新未來，<span>黃金四角正核心的關鍵位置，最好的願景都站在這裡！</span></div>
+      「大都會水岸特區」環擁雙北國家級重磅建設，<br v-if="isMobile" />
+      東以一橋之距與台北雙星特區共好共榮，<br />
+      跨步南向新北第二行政中心，打造三重新市政特區，<br v-if="isMobile" />
+      串聯西側新北產業園區以及新莊副都心，繁華隨享，<br />
+      連通北面銀河灣計畫，水岸觀光娛樂醫療新未來，<br v-if="isMobile" />
+      黃金四角正核心的關鍵位置，最好的願景都站在這裡！
       </div>
     </section>
   </div>
@@ -65,19 +69,20 @@ export default {
 @import "src/assets/style/myvar"
 .title
   color: $yellow
-  font-size: 1.3em
 .pic
   width: 100%
   position: relative
   img
     width: 100%
+    vertical-align: bottom
+    &:nth-child(2)
+      position: absolute
+      top: 0
+      left: 0
 .msg
   color: #fff
-  font-weight: lighter
-  letter-spacing: 1.5px
-  line-height: 1.6
-  border-style: solid
-  border-color: #fff
+  // letter-spacing: 1.5px
+  border: solid #fff
   border-width: 0 1px
 
 @media screen and (min-width: $bp-pc)
@@ -88,7 +93,6 @@ export default {
   .title
     margin: 0 0 3vw
   .msg
-    font-size: 14px
     margin-top: 3vw
 
 @media screen and (max-width: $bp-mb)
@@ -96,9 +100,7 @@ export default {
     margin-bottom: 20vw
   .title
     margin: 10vw 0 5vw
-    font-size: 1.1em
   .msg
-    font-size: 14px
     border: none
     span
       display: block

@@ -8,18 +8,13 @@
 
 <style lang="sass" scoped>
 @keyframes aniWave
-  0%
-    transform: translateY(-5px)
-  50%
-    transform: translateY(5px)
-  100%
-    transform: translateY(-5px)
-
+  to
+    transform: translateY(0)
 .ball_wave
   height: 100%
   width: 100%
-  transform: translateY(-5px)
-  animation: aniWave 3s infinite forwards
+  transform: translateY(100%)
+  animation: aniWave 3s ease-in-out infinite alternate
   img
     width: 100%
 </style>

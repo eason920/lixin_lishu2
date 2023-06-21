@@ -26,29 +26,28 @@
         </div>
         <div class="box_canvas">
           <div class="canvas">
-            <div><img src="./S3/empty.png" /><img class="float group1" :class="[{ani: bAddClass1}]" src="./S3/11.png" /></div>
-            <div><img src="./S3/empty.png" /><img class="float group1" :class="[{ani: bAddClass1}]" src="./S3/12.png" /></div>
-            <div><img src="./S3/empty.png" /><img class="float group1" :class="[{ani: bAddClass1}]" src="./S3/13.png" /></div>
-            <div><img src="./S3/empty.png" /><img class="float group1" :class="[{ani: bAddClass1}]" src="./S3/14.png" /></div>
+            <div><img src="./S3/empty.png" /><div class="float group1" :class="[{ani: bAddClass1}]"></div></div>
+            <div><img src="./S3/empty.png" /><div class="float group1" :class="[{ani: bAddClass1}]"></div></div>
+            <div><img src="./S3/empty.png" /><div class="float group1" :class="[{ani: bAddClass1}]"></div></div>
+            <div><img src="./S3/empty.png" /><div class="float group1" :class="[{ani: bAddClass1}]"></div></div>
             <!---->
-            <div><img src="./S3/empty.png" /><img class="float group2" :class="[{ani: bAddClass2}]" src="./S3/21.png" /></div>
-            <div><img src="./S3/empty.png" /><img class="float group2" :class="[{ani: bAddClass2}]" src="./S3/22.png" /></div>
-            <div><img src="./S3/empty.png" /><img class="float group2" :class="[{ani: bAddClass2}]" src="./S3/23.png" /></div>
-            <div><img src="./S3/empty.png" /><img class="float group2" :class="[{ani: bAddClass2}]" src="./S3/24.png" /></div>
+            <div><img src="./S3/empty.png" /><div class="float group2" :class="[{ani: bAddClass2}]"></div></div>
+            <div><img src="./S3/empty.png" /><div class="float group2" :class="[{ani: bAddClass2}]"></div></div>
+            <div><img src="./S3/empty.png" /><div class="float group2" :class="[{ani: bAddClass2}]"></div></div>
+            <div><img src="./S3/empty.png" /><div class="float group2" :class="[{ani: bAddClass2}]"></div></div>
           </div>
         </div>
       </div>
       <div class="text">
-        <div
+        <h3
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-          class="pic"
-        >
-          <img src="./S3/pic.png"/>
-        </div>
+          v-if="!isMobile"><span class="en">NEW TAIPEI<br />
+METROPOLITAN PARK</span>
+          <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           data-aos-once="false"
           data-aos="fade-up"
@@ -63,12 +62,12 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          總面積424公頃，相當於16座大安森林公園，<br/>
-          比美國紐約市中央公園大1.25倍，<br/>
-          萬坪綠海綿延、7座生態景觀公園、10大景觀特色，<br/>
-          68座多功能運動場地、24公里環狀自行車步道、<br/>
-          世界最大共融性堤坡樂園孩子嗨翻天， <br/>
-          河岸景觀、自然生態、四季花海，微風鳥群…<br/>
+          總面積424公頃，相當於16座大安森林公園，<br />
+          比美國紐約市中央公園大1.25倍，<br />
+          萬坪綠海綿延、7座生態景觀公園、10大景觀特色，<br />
+          68座多功能運動場地、24公里環狀自行車步道、<br />
+          世界最大共融性堤坡樂園孩子嗨翻天， <br />
+          河岸景觀、自然生態、四季花海，微風鳥群…<br />
           適合全家大小一起同樂，新北健康樂活首選
         </p>
       </div>
@@ -206,29 +205,30 @@ $g: 5px
 #sec3
   display: flex
   color: #fff
-  line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
 .text
+  position: relative
   width: 80vw
   margin: 0 auto
   color: #fff
-  line-height: 1.5
   .pic
     width: 25vw
     margin-bottom: 3vw
     img
       width: 100%
+  h3
+    text-align: left
+    letter-spacing: 0.03em
+    line-height: 1.35
+    margin-bottom: 1.5em
+    .en
+      font-size: 2em
+    img
+      display: block
+      width: 13em
+      margin: .2em 0 0 0
+      transform: scale3d(1,1,1.1)
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
-  p
-    font:
-      family: "Noto Sans TC" !important
-      weight: 300
-
 .box
   font-size: 0
   overflow: hidden
@@ -261,10 +261,12 @@ $g: 5px
   position: relative
   img
     width: 100%
-    &.float
+  .float
       position: absolute
       left: 0
       top: 0
+      width: 100%
+      height: 100%
       transform: scale(0)
       opacity: 0
       transform-origin: 50% 0
@@ -281,6 +283,55 @@ $g: 5px
       bottom: $g
     &:nth-child(4n)
       margin-right: 0
+    &:nth-child(1)
+      > .float
+        background:
+          image: url('./S3/img1.jpg')
+          position: 0 0
+          size: 200% auto
+    &:nth-child(2)
+      > .float
+        background:
+          image: url('./S3/img1.jpg')
+          position: 100% 0
+          size: 200% auto
+    &:nth-child(3)
+      > .float
+        background:
+          image: url('./S3/img2.jpg')
+          position: 0 0
+          size: cover
+    &:nth-child(4)
+      > .float
+        background:
+          image: url('./S3/img3.jpg')
+          position: 0 0
+          size: cover
+    &:nth-child(5)
+      > .float
+        background:
+          image: url('./S3/img1.jpg')
+          position: 0 100%
+          size: 200% auto
+    &:nth-child(6)
+      > .float
+        background:
+          image: url('./S3/img1.jpg')
+          position: 100% 100%
+          size: 200% auto
+    &:nth-child(7)
+      > .float
+        background:
+          image: url('./S3/img4.jpg')
+          position: 0 0
+          size: auto 100%
+    &:nth-child(8)
+      > .float
+        background:
+          image: url('./S3/img4.jpg')
+          position: 100% 0
+          size: auto 100%
+    
     @include effect
 @keyframes ani
   from
@@ -293,13 +344,9 @@ $g: 5px
   #sec3
     padding: 3vw 10vw 5vw
     line-height: 1.7
-    font:
-      size: calc(20 * 100vw / 1920)
 
     h2
       text-align: left
-      font:
-        size: 1.63em
     p
       margin: 1.5vw 0 5vw
       text-align: justify
@@ -314,15 +361,11 @@ $g: 5px
     flex-direction: column
     padding: 5vw 0
     h2
-      font:
-        size: 4.2vw
       span
         display: block
         text-align: center
     p
       margin: 3vw 0 12vw
-      font:
-        size: 3.2vw
   .canvas0, .canvas
     margin-bottom: 12vw
 
@@ -350,17 +393,17 @@ $g: 5px
 .swiper-slide
   background:
     position: 0 0
-    size: contain
+    size: cover
   position: relative
   background-repeat: no-repeat
   &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
-    background-image: url('./S3/1.png')
+    background-image: url('./S3/1.jpg')
 
   &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
-    background-image: url('./S3/2.png')
+    background-image: url('./S3/2.jpg')
 
   &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
-    background-image: url('./S3/3.png')
+    background-image: url('./S3/3.jpg')
 .swiper-container
   z-index: 2
 @media screen and (min-width: $bp-pc)
@@ -496,4 +539,6 @@ $w: 10px
   bottom: 10px
   color: #fff
   font-size: 12px
+  text-align: right
+
 </style>

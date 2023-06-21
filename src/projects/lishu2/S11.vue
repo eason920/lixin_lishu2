@@ -57,6 +57,7 @@
   position: absolute
   left: 50%
   transform: translateX(-50%)
+  z-index:3
 .aos
   width: 100%
 

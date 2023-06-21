@@ -32,28 +32,27 @@
           data-aos-offset="0"
         >
           <div>
-            <img src="./S5/21.png" />
+            <img src="./S5/21.jpg" />
             <div class="gradient"></div>
             <div class="msg">新北環快</div>
           </div>
           <div>
-            <img src="./S5/22.png" />
+            <img src="./S5/22.jpg" />
             <div class="gradient"></div>
             <div class="msg">機場捷運A2a站示意圖</div>
           </div>
         </div>
       </div>
       <div class="text">
-        <div
+        <h3
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-          class="pic"
-        >
-          <img src="./S5/logo.png"/>
-        </div>
+          v-if="!isMobile"><span class="en">Transit<br />
+Oriented Development</span>
+          <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           data-aos-once="false"
           data-aos="fade-up"
@@ -68,7 +67,10 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          【萊茵水花園】位於正疏洪東路上，2分鐘速達捷運三重站、5分鐘直上中山高，中興橋、忠孝橋及台北橋，僅需4~8分鐘的車程，台64線、新北環快、七大聯外橋樑縱橫雙北，未來機場捷運A2a站，共榮台北雙星國門盛世，興建中捷運北環段Y19b站，串連士林大直國際脈動，穩坐新北第一圈最新最優質的水岸新都心。
+          【萊茵水花園】位於正疏洪東路上，3分鐘速達捷運A2三重站、5分鐘直上中山高，<br />
+          中興橋、忠孝橋及台北橋，僅需6~9分鐘的車程，台64線、新北環快、七大聯外橋樑縱橫雙北，<br />
+          未來機場捷運A2a站，共榮台北雙星國門盛世，興建中捷運北環段Y19b站，串連士林大直國際脈動，<br />
+          穩坐新北第一圈最新最優質的水岸新都心。
         </p>
         <h2
           data-aos-once="false"
@@ -83,10 +85,11 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >
-        <span>未來三重水岸新區透過「TOD都市發展計劃」，</span>
-<span>環狀線北環段Y19b捷運用地，一如東京品川車站，</span>
-活化區域改變地貌，創造優質環境；北台灣最大果菜市場轉型文化都心，打造兼具國際觀光與文藝機能的「綠藝之丘」，【萊茵水花園】首蒙其利，提前豐收新三重未來盛世！
+        >未來三重水岸新區透過「TOD都市發展計劃」，<br />
+        環狀線北環段Y19b捷運用地，一如東京品川車站，<br />
+        活化區域改變地貌，創造優質環境；北台灣最大果菜市場轉型文化都心，<br />
+        打造兼具國際觀光與文藝機能的「綠藝之丘」，<br />
+        【萊茵水花園】首蒙其利，提前豐收新三重未來盛世！
         </p>
       </div>
     </section>
@@ -200,8 +203,6 @@ $g: 5px
   display: flex
   color: #fff
   line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
 .text
   width: 80vw
   margin: 0 auto
@@ -212,15 +213,20 @@ $g: 5px
     margin-bottom: 2vw
     img
       width: 100%
+  h3
+    text-align: left
+    letter-spacing: 0.03em
+    line-height: 1.35
+    margin-bottom: 1.5em
+    .en
+      font-size: 1.83em
+    img
+      display: block
+      width: 13em
+      margin: .2em 0 0 0
+      transform: scale3d(1,1,1.1)
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
-  p
-    font:
-      family: "Noto Sans TC" !important
-      weight: 300
 
 .box
   font-size: 0
@@ -286,13 +292,9 @@ $g: 5px
   #sec5
     padding: 3vw 10vw 5vw
     line-height: 1.7
-    font:
-      size: calc(20 * 100vw / 1920)
 
     h2
       text-align: left
-      font:
-        size: 1.5em
     p
       margin-top: 1.5vw
       text-align: justify
@@ -307,15 +309,11 @@ $g: 5px
     flex-direction: column
     padding: 5vw 0
     h2
-      font:
-        size: 4vw
       span
         display: block
         text-align: center
     p
       margin: 3vw 0 12vw
-      font:
-        size: 3.2vw
   .canvas0, .canvas
     margin-bottom: 12vw
 
@@ -344,13 +342,13 @@ $g: 5px
   position: relative
   background-repeat: no-repeat
   &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
-    background-image: url('./S5/3.png')
+    background-image: url('./S5/3.jpg')
 
   &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
-    background-image: url('./S5/1.png')
+    background-image: url('./S5/1.jpg')
 
   &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
-    background-image: url('./S5/2.png')
+    background-image: url('./S5/2.jpg')
 .swiper-container
   z-index: 2
 @media screen and (min-width: $bp-pc)
@@ -504,6 +502,8 @@ $w: 10px
       width: calc(100%/6*2 - 4px)
     img
       width: 100%
+      height: 100%
+      object-fit: cover
 
 @media screen and (max-width: $bp-mb)
   .static

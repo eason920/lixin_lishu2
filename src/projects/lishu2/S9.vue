@@ -1,17 +1,14 @@
 <template>
   <div class="relative">
     <section id="sec9">
-      <div
+      <h3
         v-if="isMobile"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
-        data-aos-offset="0"
-        class="pic"
-      >
-        <img src="./S9/title.png"/>
-      </div>
+        data-aos-offset="0"><span class="en">STUCTURAL SAFTY</span>
+        <img loading="lazy" src="./S1/logo.png" /></h3>
       <div class="box">
         <div class="canvas_box"
           data-aos-once="false"
@@ -42,17 +39,14 @@
         </ul>
       </div>
       <div class="text">
-        <div
-          v-if="!isMobile"
+        <h3
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-          class="pic"
-        >
-          <img src="./S9/title.png"/>
-        </div>
+          v-if="!isMobile"><span class="en">STUCTURAL SAFTY</span>
+          <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           data-aos-once="false"
           data-aos="fade-up"
@@ -69,7 +63,8 @@
         >
 超越建築法規要求，以蓋超高樓層建築相同之嚴謹，<br/>
 送交結構外審，透過第三方公正單位把關，打造安心御邸；<br/>
-精密隔熱砂漿工法，恆久節能有效降低室內溫度，<span>5年防水保固，專注方吋細節滴水不漏，確保居家生活品質。</span>
+精密隔熱砂漿工法，恆久節能有效降低室內溫度，<br v-if="isMobile" />
+5年防水保固，專注方吋細節滴水不漏，確保居家生活品質。
 
         </p>
       </div>
@@ -182,9 +177,18 @@ $g: 5px
 #sec9
   display: flex
   color: #fff
-  line-height: 1.5
-  font:
-    size: calc(12 * 100vw / 375)
+h3
+  text-align: left
+  letter-spacing: 0.03em
+  line-height: 1.35
+  margin-bottom: 1.5em
+  .en
+    font-size: 2.2em
+  img
+    display: block
+    width: 13em
+    margin: .2em 0 0 0
+    transform: scale3d(1,1,1.1)
 .text
   width: 80vw
   margin: 0 auto
@@ -197,13 +201,6 @@ $g: 5px
       width: 100%
   h2
     color: $yellow
-    font:
-      size: 1.25em
-      weight: 600
-  p
-    font:
-      family: "Noto Sans TC" !important
-      weight: 300
 
 .box
   font-size: 0
@@ -234,6 +231,14 @@ $g: 5px
       bottom: 5vw
     img
       width: 100%
+  h3
+    margin:
+      left: 5vw
+      bottom: 5vw
+    .en
+      font-size: 2em
+    img
+      width: 10.2em
 
 // ====================================
 // == CANVAS
@@ -276,13 +281,9 @@ $g: 5px
   #sec9
     padding: 3vw 10vw 5vw
     line-height: 1.7
-    font:
-      size: calc(20 * 100vw / 1920)
 
     h2
       text-align: left
-      font:
-        size: 1.5em
     p
       margin-top: 1.5vw
       text-align: justify
@@ -296,13 +297,8 @@ $g: 5px
   #sec9
     flex-direction: column
     padding: 5vw 0
-    h2
-      font:
-        size: 4vw
     p
       margin: 3vw 0 12vw
-      font:
-        size: 3.2vw
       span
         display: block
         text-align: center
@@ -348,13 +344,6 @@ $g: 5px
   .swiper-container
     width:  100%
 
-  .swiper-slide
-    &:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(7)
-      background-image: url('./S9/1.png')
-
-    &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8)
-      background-image: url('./S9/2.png')
-
 @media screen and (max-width: $bp-mb)
   // h
   .swiper-container, // height
@@ -369,10 +358,10 @@ $g: 5px
 
   .swiper-slide
     &:nth-child(1), &:nth-child(3), &:nth-child(5), &:nth-child(7)
-      background-image: url('./S9/m1.png')
+      background-image: url('./S9/m1.jpg')
 
     &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8)
-      background-image: url('./S9/m2.png')
+      background-image: url('./S9/m2.jpg')
 
   // gurter
   .canvas_box
