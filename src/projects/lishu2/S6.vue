@@ -181,10 +181,9 @@ h3
     margin: .2em 0 0 0
     transform: scale3d(1,1,1.1)
 .text
-  width: 80vw
+  width: 82vw
   margin: 0 auto
   color: #fff
-  line-height: 1.5
   .pic
     width: 18vw
     margin-bottom: 2vw
@@ -271,7 +270,6 @@ h3
 @media screen and (min-width: $bp-pc)
   #sec6
     padding: 3vw 10vw 5vw
-    line-height: 1.7
 
     h2
       text-align: left
@@ -485,10 +483,13 @@ $w: 10px
 
 .msg
   position: absolute
-  right: 10px
-  bottom: 10px
+  right: 0.5em
+  bottom: 0.5em
   color: #fff
   font-size: 12px
   text-align: right
+@media screen and (max-width: $bp-mb)
+  .msg
+    font-size: 8px
 
 </style>

@@ -98,7 +98,6 @@ export default {
     flex-wrap: wrap
     // align-content: center
     justify-content: center
-    line-height: 1.7
     padding-top: $g
     margin-top: 3vw
     &:after

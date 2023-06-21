@@ -112,6 +112,7 @@ export default {
 @media screen and (min-width: $bp-pc)
   .swiper-slide
     background-repeat: no-repeat
+    background-size: cover
     &:nth-child(1), &:nth-child(4), &:nth-child(7)
       background-image: url('./S8/1.jpg')
 
@@ -143,7 +144,7 @@ export default {
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 31.5vw // w * 0.562
+    height: 32vw // w * 0.562
 
   // w
   .swiper-container
@@ -231,11 +232,15 @@ export default {
 // ====================================
 .msg
   position: absolute
-  right: 2.5vw
-  bottom: 10px
+  right: 0.5em
+  bottom: 0.5em
   color: #fff
   font-size: 12px
   text-shadow: 0 0 12px #000, 0 0 5px #000
+  text-align: right
+@media screen and (max-width: $bp-mb)
+  .msg
+    font-size: 8px
 
 
 

@@ -210,12 +210,10 @@ $g: 5px
   display: flex
   align-items: center
   color: #fff
-  line-height: 1.5
 .text
   width: 80vw
   margin: 0 auto
   color: #fff
-  line-height: 1.5
   .pic
     width: 18vw
     margin-bottom: 1vw
@@ -300,7 +298,6 @@ $g: 5px
 @media screen and (min-width: $bp-pc)
   #sec7
     padding: 3vw 10vw 5vw
-    line-height: 1.7
 
     h2
       text-align: left

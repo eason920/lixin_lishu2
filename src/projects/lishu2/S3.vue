@@ -343,7 +343,6 @@ $g: 5px
 @media screen and (min-width: $bp-pc)
   #sec3
     padding: 3vw 10vw 5vw
-    line-height: 1.7
 
     h2
       text-align: left
@@ -535,10 +534,13 @@ $w: 10px
 
 .msg
   position: absolute
-  right: 10px
-  bottom: 10px
+  right: 0.5em
+  bottom: 0.5em
   color: #fff
   font-size: 12px
   text-align: right
+@media screen and (max-width: $bp-mb)
+  .msg
+    font-size: 8px
 
 </style>

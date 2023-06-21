@@ -118,8 +118,12 @@ export default {
 
 .mm
   position: absolute
-  right: 10px
-  bottom: 10px
+  right: 0.5em
+  bottom: 0.5em
   color: #fff
   font-size: 12px
+  font-family: Arial, "Noto Sans TC", sans-serif
+@media screen and (max-width: $bp-mb)
+  .mm
+    font-size: 8px
 </style>

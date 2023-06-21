@@ -41,6 +41,7 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
+          v-if="!isMobile"
         >
 <span>Panasonic全自動馬桶，自動掀蓋自動洗淨，乾淨又方便。</span>
 <span>日本nanoe™奈米水離子發生器，淨化梯廳空間空氣品質。</span>
@@ -48,6 +49,21 @@
 <span>英國STUDOR排水防疫系統、居家空氣清新無臭無蟲害。</span>
 <span>Honeywell智慧型反逆洗過濾器，全面提升居家用水品質。</span>
 <span>櫻花廚下淨水器，打開水龍頭隨時滿足居家生飲洗滌用水。</span>
+        </p>
+        <p
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+          v-else
+        >
+<span>Panasonic全自動馬桶，自動掀蓋自動洗淨，乾淨又方便</span>
+<span>日本nanoe™奈米水離子發生器，淨化梯廳空間空氣品質</span>
+<span>德國Bosch洗碗機，極智科技聰明省水輕鬆解決洗碗差事</span>
+<span>英國STUDOR排水防疫系統、居家空氣清新無臭無蟲害</span>
+<span>Honeywell智慧型反逆洗過濾器，全面提升居家用水品質</span>
+<span>櫻花廚下淨水器，打開水龍頭隨時滿足居家生飲洗滌用水</span>
         </p>
       </div>
     </section>
@@ -129,10 +145,9 @@ $g: 5px
     bottom: 0
     left: 0
 .text
-  width: 90vw
+  width: 88vw
   margin: 0 auto
   color: #fff
-  line-height: 1.5
   .pic
     width: 20vw
     margin-bottom: 3vw
@@ -154,7 +169,6 @@ $g: 5px
     color: $yellow
 
 .box
-  font-size: 0
   overflow: hidden
 
 @media screen and (min-width: $bp-pc)
@@ -197,50 +211,45 @@ $g: 5px
   img
     width: 100%
     height: 100%
-    &.float
-      position: absolute
-      left: 0
-      top: 0
-      transform: scale(0)
-      opacity: 0
-      transform-origin: 50% 0
-      &.ani
-        animation: ani .7s linear forwards
+  .float
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    transform: scale(0)
+    opacity: 0
+    transform-origin: 50% 0
+    background: #FFF
+    &.ani
+      animation: ani .7s linear forwards
 .canvas0a
-  width: calc( 100% - #{$g}*2)
-  margin:
-    bottom: $g - 1
-    left: $g
   @include effect
 .canvas
-  font-size: 0
-  width: 100%
   div
-    width: calc( 33% - #{$g})
-    display: inline-block
-    margin:
-      right: $g
-      bottom: $g
-    &:nth-child(3n)
-      margin-right: 0
     @include effect
 
 p
+  text-align: justify
   span
     display: block
-    padding-left: 20px
+    padding-left: 1.3em
     position: relative
-    margin-bottom: 5px
+    margin-bottom: -1em
     &:before
       content: "◆"
       position: absolute
       left: 0
       top: 0
+    &:after
+      content: ""
+      display: inline-block
+      width: 7em
+      height: 1em
 
 @media screen and (min-width: $bp-pc)
   #sec3
     padding: 3vw 10vw 5vw
-    line-height: 1.7
 
     h2
       text-align: left
@@ -267,5 +276,16 @@ p
     // margin-bottom: 12vw
 
   .box_canvas
-    margin: 5vw 11vw 0
+    margin: 5vw 6vw 0
+    
+.box_canvas
+  display: flex
+  flex-direction: column
+  gap: 0.4em
+  div
+    display: flex
+    flex: 1
+    gap: 0.4em
+    width: 100%
+    
 </style>
