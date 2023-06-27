@@ -98,8 +98,7 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >義大利國寶建築師Antonio Citterio、西班牙設計鬼才Patricia Urquiola、<br v-if="!isMobile"  />
-        普利茲克建築師Zaha Hadid、日本設計大師深澤直人…全球最傑出的建築師、設計師、藝術家…跨界合作首選！B&B義大利頂級家俬，以獨特的品質和永恆的優雅，成為豪宅空間中少不了的經典身影，<br />
-        【萊茵水花園】同步米蘭，回家品味大師經典！
+        普利茲克建築師Zaha Hadid、日本設計大師深澤直人…全球最傑出的建築師、設計師、藝術家…跨界合作首選！B&B義大利頂級家俬，以獨特的品質和永恆的優雅，成為豪宅空間中少不了的經典身影，<br v-if="!isMobile"/>【萊茵水花園】同步米蘭，回家品味大師經典！
         </p>
       </div>
     </section>
@@ -208,7 +207,7 @@ $g: 5px
   align-items: center
   color: #fff
 .text
-  width: 80vw
+  width: 83vw
   margin: 0 auto
   color: #fff
   .pic

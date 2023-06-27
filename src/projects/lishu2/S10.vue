@@ -187,7 +187,7 @@ $g: 5px
   .pic
     display: none
   .text
-    font-size: 12px
+    // font-size: 12px
     text-align: left
 
 // ====================================
