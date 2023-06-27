@@ -1,6 +1,6 @@
 <template>
   <div class="home no-padding-top">
-    <img src="../projects/lishu2/all/mrt.png" id="mrt" />
+    <img src="../projects/lishu2/all/mrt.png" :class="{ 'mrt-scroll': isScrolled }" id="mrt" />
     <div class="water_fixed">
       <water class="water" />
     </div>
@@ -120,6 +120,7 @@ export default {
       isMobile,
       isSide: false,
       load: true,
+      isScrolled: false,
     }
   },
   created() {
@@ -146,9 +147,20 @@ export default {
     })
   },
   mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    init() {}
+    init() {},
+    handleScroll() {
+      if (window.pageYOffset > 0 && !this.isScrolled) {
+        this.isScrolled = true;
+      } else if (window.pageYOffset === 0 && this.isScrolled) {
+        this.isScrolled = false;
+      }
+    }
   }
 }
 </script>
@@ -204,6 +216,10 @@ section
 @media screen and (max-width: $bp-mb)
   #mrt
     height: 30vw
+    transition: transform .5s
+    transform-origin: 0 0
+    &.mrt-scroll
+      transform: scale(.6)
   .sbg
     .is_pc
       display: none

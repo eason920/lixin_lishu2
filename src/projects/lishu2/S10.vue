@@ -97,7 +97,6 @@ export default {
     const target0 = $('.group0a')
     const target1 = $('.group1a')
     const target2 = $('.group2a')
-    const target4 = $('.group4a')
     let offset0 = 0
     let offset1 = 0
     let offset2 = 0
@@ -106,18 +105,16 @@ export default {
       offset0 = target0.offset().top
       offset1 = target1.offset().top
       offset2 = target2.offset().top
-      offset4 = target4.offset().top
       action()
     }, 3000)
     const action = () => {
       const scrollTop = $(window).scrollTop() + $(window).height() - 50
-      console.log('scrollTop>>', scrollTop)
+     /* console.log('scrollTop>>', scrollTop)
       console.log('offset0>>', offset0)
-      console.log('this.bAddClass0', this.bAddClass0)
+      console.log('this.bAddClass0', this.bAddClass0) */
       this.bAddClass0 = scrollTop >= offset0
       this.bAddClass1 = scrollTop >= offset1
       this.bAddClass2 = scrollTop >= offset2
-      this.bAddClass4 = scrollTop >= offset4
     }
     $(window).scroll(() => {
       action()

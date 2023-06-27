@@ -254,7 +254,8 @@ export default {
 
   methods: {},
 
-  created() { },
+  created() {
+   },
 
   mounted() {
     $('.title_box,.appoint').click(() => {
