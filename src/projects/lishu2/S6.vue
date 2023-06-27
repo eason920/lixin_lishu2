@@ -181,7 +181,7 @@ h3
     margin: .2em 0 0 0
     transform: scale3d(1,1,1.1)
 .text
-  width: 82vw
+  width: 90vw
   margin: 0 auto
   color: #fff
   .pic
