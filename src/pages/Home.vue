@@ -24,11 +24,14 @@
       <img class="is_mb" src="../projects/lishu2/all/sbg_mb.png" />
       <img class="is_pc" src="../projects/lishu2/all/sbg_pc.png" />
     </div> -->
-   <vue-lazy-component class="section" id="section1" style="" @init="init">
-      <S1 />
-    </vue-lazy-component> 
+    <vue-lazy-component class="section" id="section1" style="" @init="init">
+      <S13 />
+    </vue-lazy-component>
     <vue-lazy-component class="section" id="section2" @init="init">
       <S2 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section12" @init="init">
+      <S12 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section3" @init="init">
       <S3 />
@@ -78,7 +81,7 @@ import Loading from '@/components/Loading.vue'
 // import Indigator from '@/components/Indigator.vue'
 // import SwiperDemo from '@/projects/lishu2/swiperDemo_S7_single.vue'
 import MClose from '@/projects/lishu2/MClose.vue'
-import S1 from '@/projects/lishu2/S1.vue'
+// import S1 from '@/projects/lishu2/S1.vue'
 import S2 from '@/projects/lishu2/S2.vue'
 import S3 from '@/projects/lishu2/S3.vue'
 import S4 from '@/projects/lishu2/S4.vue'
@@ -89,6 +92,8 @@ import S8 from '@/projects/lishu2/S8.vue'
 import S9 from '@/projects/lishu2/S9.vue'
 import S10 from '@/projects/lishu2/S10.vue'
 import S11 from '@/projects/lishu2/S11.vue'
+import S12 from '@/projects/lishu2/S12.vue'
+import S13 from '@/projects/lishu2/S13.vue'
 
 export default {
   name: 'home',
@@ -102,8 +107,9 @@ export default {
     MobileNav,
     // SwiperDemo,
     MClose,
-    S1,
+    S13,
     S2,
+    S12,
     S3,
     S4,
     S5,
@@ -232,7 +238,7 @@ section
       left: -30vw
       width:200vw
       transform: rotate(-35deg)
-      
+
   .water_mo
     position: fixed
     left: 0
