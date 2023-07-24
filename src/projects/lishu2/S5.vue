@@ -59,7 +59,7 @@ Oriented Development</span>
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >雙北最強交通路網 雙捷加速增值在線</h2>
+        >一高三捷三快四橋<br>雙北最強交通路網 雙捷加速增值在線</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
@@ -67,10 +67,8 @@ Oriented Development</span>
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          【萊茵水花園】位於正疏洪東路上，<br v-if="isMobile" />3分鐘速達捷運A2三重站、<br  v-if="!isMobile" />5分鐘直上中山高，<br />
-          中興橋、忠孝橋及台北橋，僅需6~9分鐘的車程，<br />台64線、新北環快、七大聯外橋樑縱橫雙北，<br />
-          未來機場捷運A2a站，共榮台北雙星國門盛世，<br />興建中捷運北環段Y19b站，串連士林大直國際脈動，<br />
-          穩坐新北第一圈最新最優質的水岸新都心。
+        捷運A2a預定站步行約3分鐘，搶先搭上未來列車！<br />
+跟著A2a站起飛，快速銜接台北未來，共榮台北雙星國門盛世；3分鐘速達捷運A2三重站、5分鐘直上中山高，已動工捷運北環段Y19b站，串連士林大直國際脈動，台64線、台65線、新北環快，三大高架快速道路，四大橋樑縱橫台北，中興橋、忠孝橋及台北橋等僅需6~9分鐘的車程，穩坐新北第一圈最新最優質的水岸新都心。
         </p>
         <h2
           data-aos-once="false"

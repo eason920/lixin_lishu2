@@ -54,6 +54,27 @@ METROPOLITAN PARK</span>
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
+        >能住水岸第一排 何必屈就第二排</h2>
+        <p
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
+        >
+          景觀的價值性，在於土地的稀有性，<br v-if="isMobile" />
+          放眼大直經驗，近30年來水岸第一排的建案價格，<br v-if="isMobile" />
+          超過非首排個案價格高達66%！<br>
+雙北同時擁有綠地水岸公園的「大都會水岸特區」，<br v-if="isMobile" />
+【萊茵水花園】以景觀頭等艙的姿態，對位大直水岸，<br v-if="isMobile" />
+超越大安森林，升等水岸第一排尊榮生活，<br v-if="isMobile" />讓資產看得到未來。
+        </p>
+        <h2
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="800"
+          data-aos-offset="0"
         >新北大都會公園 萊茵水花園的生活庭院</h2>
         <p
           data-aos-once="false"

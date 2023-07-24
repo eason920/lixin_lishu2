@@ -34,7 +34,7 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >新北大都會公園 萊茵水花園的生活庭院</h2>
+        >國際建材高規格禮遇 成就完美精緻住宅</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"

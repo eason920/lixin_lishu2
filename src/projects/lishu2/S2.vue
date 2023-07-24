@@ -1,13 +1,6 @@
 <template>
   <div class="relative">
     <section id="sec2">
-      <div class="title"
-        data-aos-once="false"
-        data-aos="fade-up"
-        data-aos-delay="0"
-        data-aos-duration="800"
-        v-if="!isMobile"
-      >能住水岸第一排 何必屈就第二排</div>
       <div class="box" id="box3" v-if="isMobile">
         <div class="s2pic">
           <img src="./S2/map.jpg" class="basic" />
@@ -23,13 +16,26 @@
         <img src="./S2/map.jpg" />
         <img src="./S2/img.png" />
       </div>
-      <div class="title" v-if="isMobile"
+      <div class="msg"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
-      >能住水岸第一排 何必屈就第二排</div>
-      <div class="msg"
+      >千金難買早知道，水岸必買要知道！完整複製大直水岸的歷史經驗增值模式，只有在三重水岸新區「大都會水岸特區」，不只掌握「一高三捷三快四橋」交通大利多關鍵，想讓手上資產跟站在水岸第一排一樣有遠見，還有很多關鍵價值，讓你買下屬於自己的房子也買下尊榮生活，在水岸第一排永做第一。
+<ul>
+  <li>新北第一環，大都會水岸特區價值同步台北</li>
+  <li>交通第一順，一高三捷三快四橋縱橫雙北</li>
+  <li>增值第一選，媲美指標個案，房價再創新高</li>
+  <li>國門第一圈，2站直達國門台北雙星特區</li>
+  <li>水岸第一排，目前僅剩約8.6%可開發土地</li>
+  <li>建設第一強，北環段TOD開發、Citylink</li>
+  <li>景觀第一美，22米水漾路第一排水岸景觀</li>
+  <li>公園第一大，16座大安森林公園綠金價值</li>
+  <li>起漲第一手，對位大直水岸首排發展經驗</li>
+  <li>價值第一名，重劃起漲點稀有席次身價漲</li>
+</ul>
+      </div>
+      <!-- <div class="msg"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
@@ -42,7 +48,7 @@
         【萊茵水花園】以景觀頭等艙的姿態，<br />
         對位大直水岸，超越大安森林，<br v-if="isMobile" />
         升等水岸第一排尊榮生活，讓資產看得到未來。
-      </div>
+      </div> -->
       <div v-if="isMobile" id="fingerbox">
         <div>
           左右滑動觀看
@@ -137,6 +143,32 @@ export default {
   // letter-spacing: 1.5px
   border: solid #fff
   border-width: 0 1px
+  padding: 0 3em
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  position: relative
+  margin-top: 6vw
+  text-align: center
+  ul
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 100%
+    margin: 2em auto 0 auto
+    gap: 0
+    text-align: justify
+
+    li
+      width: 80%
+      margin-bottom: -1.3em
+      position: relative
+      &:after
+        content: ""
+        display: inline-block
+        width: 7em
+        height: 1em
 
 @media screen and (min-width: $bp-pc)
   #sec2
@@ -155,6 +187,12 @@ export default {
     margin: 0 0 3vw
   .msg
     margin-top: 3vw
+    ul
+      gap: 0 2em
+      li
+        width: 34%
+    
+
 
 @media screen and (max-width: $bp-mb)
   #sec2

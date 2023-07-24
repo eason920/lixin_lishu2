@@ -161,7 +161,7 @@
     min-height: calc(100vw * 900 / 1920)
     max-height: calc(100vw * 1080 / 1920)
     background:
-      image: url(./S13/bg.png)
+      image: url(./S13/bg.jpg)
       size: cover
       color: #004A77
       position: 0
@@ -227,7 +227,7 @@
 @media screen and (max-width: $bp-mb)
   #sec13
     background:
-      image: url(./S13/bgm.png)
+      image: url(./S13/bgm.jpg)
       size: cover
       color: #004A77
       position: center

@@ -79,36 +79,36 @@
             <li>
               <h6>聰明置產水岸，必要8大關鍵：</h6>
             </li>
-            <li>
-              <h6>要有 進化規格〈1〉｜尊榮水岸第一排</h6>
+            <li class="v">
+              <h6>進化規格〈1〉｜尊榮水岸第一排</h6>
               <span>水岸第一排，重劃區中心，有感未來增值核心</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈2〉｜捷運增值看未來</h6>
+            <li class="v">
+              <h6>進化規格〈2〉｜捷運增值看未來</h6>
               <span>捷運，A2a預定站步行約3分鐘</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈3〉｜珍稀戶數高品質</h6>
+            <li class="v">
+              <h6>進化規格〈3〉｜珍稀戶數高品質</h6>
               <span>剛剛好的社區戶數規模，高品質高保值</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈4〉｜建築名家創地景</h6>
+            <li class="v">
+              <h6>進化規格〈4〉｜建築名家創地景</h6>
               <span>台北市豪門建築名家陳麗珍．高仲廷建築師事務所打造</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈5〉｜豪門物業當管家</h6>
+            <li class="v">
+              <h6>進化規格〈5〉｜豪門物業當管家</h6>
               <span>北市豪宅等級新美齊物管，首年免管理費</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈6〉｜國際花藝成端景</h6>
+            <li class="v">
+              <h6>進化規格〈6〉｜國際花藝成端景</h6>
               <span>CNFlower國際花藝美學生活營造</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈7〉｜頂級傢俬品奢華</h6>
+            <li class="v">
+              <h6>進化規格〈7〉｜頂級傢俬品奢華</h6>
               <span>B&B Italia頂級義大利品牌傢俬，同步米蘭時尚</span>
             </li>
-            <li>
-              <h6>要有 進化規格〈8〉｜建材工法再升級</h6>
+            <li class="v">
+              <h6>進化規格〈8〉｜建材工法再升級</h6>
               <span>高人一等的建材配備，全面升級再進化</span>
             </li>
           </ul>
@@ -356,28 +356,28 @@ $g: 5px
   position: relative
   background-repeat: no-repeat
   &:nth-child(1), &:nth-child(9),&:nth-child(17),&:nth-child(25),&:nth-child(33),&:nth-child(41),&:nth-child(49),&:nth-child(57)
-    background-image: url('./S12/1.png')
+    background-image: url('./S12/1.jpg')
 
   &:nth-child(2), &:nth-child(10),&:nth-child(18),&:nth-child(26),&:nth-child(34),&:nth-child(42),&:nth-child(50),&:nth-child(58)
-    background-image: url('./S12/2.png')
+    background-image: url('./S12/2.jpg')
 
   &:nth-child(3), &:nth-child(11),&:nth-child(19),&:nth-child(27),&:nth-child(35),&:nth-child(43),&:nth-child(51),&:nth-child(59)
-    background-image: url('./S12/3.png')
+    background-image: url('./S12/3.jpg')
 
   &:nth-child(4), &:nth-child(12),&:nth-child(20),&:nth-child(28),&:nth-child(36),&:nth-child(44),&:nth-child(52),&:nth-child(60)
-    background-image: url('./S12/4.png')
+    background-image: url('./S12/4.jpg')
 
   &:nth-child(5), &:nth-child(13),&:nth-child(21),&:nth-child(29),&:nth-child(37),&:nth-child(45),&:nth-child(53),&:nth-child(61)
-    background-image: url('./S12/5.png')
+    background-image: url('./S12/5.jpg')
 
   &:nth-child(6), &:nth-child(14),&:nth-child(22),&:nth-child(30),&:nth-child(38),&:nth-child(46),&:nth-child(54),&:nth-child(62)
-    background-image: url('./S12/6.png')
+    background-image: url('./S12/6.jpg')
 
   &:nth-child(7), &:nth-child(15),&:nth-child(23),&:nth-child(31),&:nth-child(39),&:nth-child(47),&:nth-child(55),&:nth-child(63)
-    background-image: url('./S12/7.png')
+    background-image: url('./S12/7.jpg')
 
   &:nth-child(8), &:nth-child(16),&:nth-child(24),&:nth-child(32),&:nth-child(40),&:nth-child(48),&:nth-child(56),&:nth-child(64)
-    background-image: url('./S12/8.png')
+    background-image: url('./S12/8.jpg')
 .swiper-container
   z-index: 2
 @media screen and (min-width: $bp-pc)
@@ -530,15 +530,25 @@ $w: 10px
         position: absolute
 
 .customUl
-  text-align: left
+  text-align: justify
   letter-spacing: 1px
+  line-height: 1.4
   li
     color: #eee
     text-shadow: 0 0 0.55em rgba(0,0,0,.3), 0 0 0.2em rgba(0,0,0,.3)
+    &.v
+      margin-left: 2.5em
+      margin-top: .5em
+      position: relative
+      &:before
+        content:"要有"
+        position: absolute
+        margin-left: -2.5em
+
   h6
     font-weight: lighter
   span
-    padding-left: 34px
+    // padding-left: 34px
     text-align: left!important
 
 @media screen and (min-width: $bp-pc)
