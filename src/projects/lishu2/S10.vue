@@ -43,7 +43,7 @@
           data-aos-offset="0"
           v-if="!isMobile"
         >
-<span>Panasonic全自動馬桶，自動掀蓋自動洗淨，乾淨又方便。</span>
+<span>Panasonic全自動馬桶，自動洗淨，乾淨又方便。</span>
 <span>日本nanoe™奈米水離子發生器，淨化梯廳空間空氣品質。</span>
 <span>德國Bosch洗碗機，極智科技聰明省水輕鬆解決洗碗差事。</span>
 <span>英國STUDOR排水防疫系統、居家空氣清新無臭無蟲害。</span>
@@ -58,7 +58,7 @@
           data-aos-offset="0"
           v-else
         >
-<span>Panasonic全自動馬桶，自動掀蓋自動洗淨，乾淨又方便</span>
+<span>Panasonic全自動馬桶，自動洗淨，乾淨又方便</span>
 <span>日本nanoe™奈米水離子發生器，淨化梯廳空間空氣品質</span>
 <span>德國Bosch洗碗機，極智科技聰明省水輕鬆解決洗碗差事</span>
 <span>英國STUDOR排水防疫系統、居家空氣清新無臭無蟲害</span>
@@ -241,7 +241,7 @@ p
     &:after
       content: ""
       display: inline-block
-      width: 7em
+      width: 10em
       height: 1em
 
 @media screen and (min-width: $bp-pc)
