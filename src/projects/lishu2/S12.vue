@@ -25,25 +25,23 @@
       <div class="text">
         <!-- 1 -->
         <h2
-          v-if="!isMobile"
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          「進化型水岸宅」重新定義 新世代水岸建築價值
+        「進化型水岸宅」重新定義 新世代水岸建築價值s
         </h2>
         <p
-          v-if="!isMobile"
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          大景當前，視野的寬度，決定資產的高度，唯有穩坐水岸第一排，增值前景方能無人可敵，【萊茵水花園】樹立同區位同級產品，難以超越的標竿。<br/>
-          定錨水岸第一排，豪門建築規格與價值新基準，並以升級版建築團隊、建材配置、空間格局、美學品味…創下「質感高不用代價高」的超強CP值，奠定人無我有，人有我優的水岸真價值！
+        大景當前，視野的寬度，決定資產的高度，唯有穩坐水岸第一排，增值前景方能無人可敵，【萊茵水花園】樹立同區位同級產品，難以超越的標竿。
+定錨水岸第一排真價值！
         </p>
         <!-- 2 -->
         <h2
@@ -57,14 +55,6 @@
           <span>質感高不用代價高</span>
           <span class="is_2">「進化型水岸宅」<b></b>大制霸關鍵勝出</span>
         </h2>
-        <div
-          v-if="isMobile"
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="100"
-          data-aos-duration="800"
-          data-aos-offset="0"
-        >制定水岸建築高規格標準，超越同級為理想而生！</div>
         <p
           data-aos-once="false"
           data-aos="fade-up"
@@ -72,46 +62,16 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          <ul class="customUl">
-            <li v-if="!isMobile">
-              <h6>制定水岸建築高規格標準，超越同級為理想而生！</h6>
-            </li>
-            <li>
-              <h6>聰明置產水岸，必要8大關鍵：</h6>
-            </li>
-            <li class="v">
-              <h6>進化規格〈1〉｜尊榮水岸第一排</h6>
-              <span>水岸第一排，重劃區中心，有感未來增值核心</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈2〉｜捷運增值看未來</h6>
-              <span>捷運，A2a預定站步行約3分鐘</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈3〉｜珍稀戶數高品質</h6>
-              <span>剛剛好的社區戶數規模，高品質高保值</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈4〉｜建築名家創地景</h6>
-              <span>台北市豪門建築名家陳麗珍．高仲廷建築師事務所打造</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈5〉｜豪門物業當管家</h6>
-              <span>北市豪宅等級新美齊物管，首年免管理費</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈6〉｜國際花藝成端景</h6>
-              <span>CNFlower國際花藝美學生活營造</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈7〉｜頂級傢俬品奢華</h6>
-              <span>B&B Italia頂級義大利品牌傢俬，同步米蘭時尚</span>
-            </li>
-            <li class="v">
-              <h6>進化規格〈8〉｜建材工法再升級</h6>
-              <span>高人一等的建材配備，全面升級再進化</span>
-            </li>
-          </ul>
+        制定水岸建築高規格標準，超越同級為理想而生！<br />
+置產需有遠見，必要8大關鍵：<br />
+<span><b>1.水岸第一排：</b>重劃區中心，看見增值核心</span>
+<span><b>2.捷運穩增值：</b>A2a預定站，步行約3分鐘</span>
+<span><b>3.戶戶高品質：</b>社區規劃以人為本，純質寧靜</span>
+<span><b>4.大師級地景：</b>陳麗珍＆高仲廷 建築師作品</span>
+<span><b>5.豪門級物管：</b>名邸管家新美齊，首年享免費</span>
+<span><b>6.風格雕塑家：</b>CNFlower以極簡豐釀空間美</span>
+<span><b>7.傢俬品奢華：</b>B&B Italia時尚品牌同步米蘭</span>
+<span><b>8.頭等艙建材：</b>建材配備全面升級，優化生活</span>
         </p>
       </div>
     </section>
@@ -219,6 +179,23 @@ $g: 5px
   display: flex
   align-items: center
   color: #fff
+  p
+    text-align: justify
+    span
+      display: block
+      padding-left: 0
+      position: relative
+      margin-bottom: -1.5em
+      width: 20em
+      &:after
+
+        content: ""
+        display: inline-block
+        width: 10em
+        height: 1em
+      b
+        font-weight: 300
+        display: inline-block
 .text
   width: 90vw
   margin: 0 auto
@@ -325,11 +302,10 @@ $g: 5px
     padding: 5vw 0
     p
       margin: 3vw 0 12vw
+      text-align: center
       span
-        display: block
-        text-align: center
-  .canvas0, .canvas
-    margin-bottom: 12vw
+        margin:0 auto -1.5em
+        text-align: justify
 
 // --------------------------------
 // -- SWITCH
@@ -529,27 +505,6 @@ $w: 10px
         content: '8'
         position: absolute
 
-.customUl
-  text-align: justify
-  letter-spacing: 1px
-  line-height: 1.4
-  li
-    color: #eee
-    text-shadow: 0 0 0.55em rgba(0,0,0,.3), 0 0 0.2em rgba(0,0,0,.3)
-    &.v
-      margin-left: 2.5em
-      margin-top: .5em
-      position: relative
-      &:before
-        content:"要有"
-        position: absolute
-        margin-left: -2.5em
-
-  h6
-    font-weight: lighter
-  span
-    // padding-left: 34px
-    text-align: left!important
 
 @media screen and (min-width: $bp-pc)
   .customH2
@@ -578,9 +533,4 @@ $w: 10px
             left: 0
     & + div
       margin-top: 12px
-  .customUl
-    padding: 30px 4vw 0
-    border-style: solid
-    border-color: #fff
-    border-width: 0 1px
 </style>

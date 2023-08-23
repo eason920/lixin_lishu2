@@ -1,17 +1,6 @@
 <template>
   <div class="relative">
     <section id="sec7">
-      <div
-        v-if="isMobile"
-        data-aos-once="false"
-        data-aos="fade-up"
-        data-aos-delay="0"
-        data-aos-duration="800"
-        data-aos-offset="0"
-        class="pic"
-      >
-        <img src="./S7/title.png"/>
-      </div>
       <div class="box">
         <div class="canvas_box"
           data-aos-once="false"
@@ -34,17 +23,13 @@
         </div>
       </div>
       <div class="text">
-        <div
-          v-if="!isMobile"
+        <h3 v-if="!isMobile"
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
-          data-aos-offset="0"
-          class="pic"
-        >
-          <img src="./S7/title.png"/>
-        </div>
+          data-aos-offset="0"><span class="en">AESTHETIC LIFE</span>
+          <img loading="lazy" src="./S7/logo.png" /></h3>
         <!-- 1 -->
         <h2
           data-aos-once="false"
@@ -53,7 +38,7 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          新美齊物業 成就頂尖名宅尊貴血統
+        新美齊物業 北市豪門管家DNA
         </h2>
         <p
           data-aos-once="false"
@@ -61,7 +46,8 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >建築門面形象源自頂奢豪宅管家物業，「新美齊物業」於民國111年榮獲優良公寓大廈評選No.1，將國外高端物業經驗與美學，導入台北市豪宅如Park259、Jade12…服務金字塔頂端與深具品味高資產客戶，除了未來社區首年免管理費的優質代管外、另外還提供免費30堂社區課程、及社區輕食Bar的服務將夢想中的生活藍圖，化為真實的幸福與感動，為【萊茵水花園】打造更勝星級旅店的貼心服務，不僅享受頂奢質感生活，更能提升建築資產價值。
+        >民國111年榮獲優良公寓大廈評選No.1，將國外高端物業管理經驗導入台北市豪宅，如Park259、Jade12等，專伺金字塔高端客戶，本社區獨享首年三項免費：物管、30堂社區課程、輕食Bar等服務，為【萊茵水花園】的主人打造星級旅店服務，真正的奢華，在您走進家門即刻享有的主動細節裡。
+
         </p>
         <!-- 2 -->
         <h2
@@ -70,14 +56,14 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >CNFlower團隊 升等居家美學品味</h2>
+        >CNFlower團隊 升等美學品味</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >新東方花藝美學大師「CNFlower」凌宗湧，精準拿捏五感與空間層次的分際，屢獲國際政商名流、五星級酒店及精品品牌指定合作，【萊茵水花園】由「CNFlower」團隊，妝點端景與香氛，讓國際花藝綻放空間與人美感互動，回家進入舒心宜人的感官體驗，生活質感全面升級！
+        >新東方花藝美學大師「CNFlower」凌宗湧，屢獲國際政商名流、五星級酒店及精品品牌指定合作，在廊道有驚豔的端景，在不經意的轉角聞到香氛。讓五感走進空間，生活質感全面升等！
         </p>
         <!-- 3 -->
         <h2
@@ -86,15 +72,14 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >B&B Italia頂級家俬 同步米蘭經典時尚</h2>
+        >B&B Italia頂級家俬 同步米蘭時尚</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >義大利國寶建築師Antonio Citterio、西班牙設計鬼才Patricia Urquiola、普利茲克建築師Zaha Hadid、日本設計大師深澤直人…全球最傑出的建築師、設計師、藝術家…跨界合作首選！
-B&B義大利頂級家俬，以獨特的品質和永恆的優雅，成為豪宅空間中少不了的經典身影，【萊茵水花園】同步米蘭，回家品味大師經典！
+        >普利茲克建築師Zaha Hadid、日本設計大師深澤直人 建築師、設計師與藝術家跨界合作首選！ B&B義大利頂級家俬，品質堅實耐久，型體經典優雅，【萊茵水花園】同步米蘭，回家品味大師經典！
         </p>
       </div>
     </section>
@@ -202,8 +187,20 @@ $g: 5px
   display: flex
   align-items: center
   color: #fff
+h3
+  text-align: left
+  letter-spacing: 0.03em
+  line-height: 1.35
+  margin-bottom: 1.5em
+  .en
+    font-size: 2.5em
+  img
+    display: block
+    width: 20em
+    margin: .2em 0 0 0
+    transform: scale3d(1,1,1.1)
 .text
-  width: 83vw
+  width: 78vw
   margin: 0 auto
   color: #fff
   .pic

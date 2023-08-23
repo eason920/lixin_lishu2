@@ -54,20 +54,14 @@ METROPOLITAN PARK</span>
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >能住水岸第一排 何必屈就第二排</h2>
+        >住水岸首排 掌握人生好牌</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >
-          景觀的價值性，在於土地的稀有性，<br v-if="isMobile" />
-          放眼大直經驗，近30年來水岸第一排的建案價格，<br v-if="isMobile" />
-          超過非首排個案價格高達66%！<br>
-雙北同時擁有綠地水岸公園的「大都會水岸特區」，<br v-if="isMobile" />
-【萊茵水花園】以景觀頭等艙的姿態，對位大直水岸，<br v-if="isMobile" />
-超越大安森林，升等水岸第一排尊榮生活，<br v-if="isMobile" />讓資產看得到未來。
+        >景觀價值，在於土地的稀有，大直經驗，有目共睹，近30年首排建案超過同區價格達66%！雙北同時擁有綠地＆水岸公園的「大都會水岸特區」，【萊茵水花園】以景觀首席之姿，對位大直水岸，超越大安森林，傍水而居，尊榮升等，首購選首排，睿智掌握資產明牌。
         </p>
         <h2
           data-aos-once="false"
@@ -75,7 +69,7 @@ METROPOLITAN PARK</span>
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >新北大都會公園 萊茵水花園的生活庭院</h2>
+        >新北大都會公園 萊茵水花園的庭院</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
@@ -83,13 +77,8 @@ METROPOLITAN PARK</span>
           data-aos-duration="800"
           data-aos-offset="0"
         >
-          總面積424公頃，相當於16座大安森林公園，<br />
-          比美國紐約市中央公園大1.25倍，<br />
-          萬坪綠海綿延、7座生態景觀公園、10大景觀特色，<br />
-          68座多功能運動場地、24公里環狀自行車步道、<br />
-          世界最大共融性堤坡樂園孩子嗨翻天， <br />
-          河岸景觀、自然生態、四季花海，微風鳥群…<br />
-          適合全家大小一起同樂，新北健康樂活首選
+        總面積424公頃，睥睨16座大安森林公園，比紐約中央公園大1.25倍的森綠一覽無垠，7座生態公園、10大生態地景，68座多功能運動場、24公里環狀自行車步道、堤坡樂園讓孩子安全放電，親水岸，溫度自然調節，鄰生態、眼界有了深度，開窗看看，出門走走，閱讀四季裡的24個節氣。
+
         </p>
       </div>
     </section>

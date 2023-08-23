@@ -1,6 +1,13 @@
 <template>
   <div class="relative">
     <section id="sec4">
+      <div class="title"
+        data-aos-once="false"
+        data-aos="fade-up"
+        data-aos-delay="0"
+        data-aos-duration="800"
+        v-if="!isMobile"
+      >台北雙星領銜 新北三大核心共榮優勢地段</div>
       <div class="pic"
         data-aos-once="false"
         data-aos="fade-up"
@@ -12,21 +19,25 @@
         <div class="gradient"></div>
         <div class="mm">黃金四角正核心</div>
       </div>
-      <div class="txt">
-      <div class="title"
+      <div class="title" v-if="isMobile"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
-      >台北雙星領銜 新北第一環</div>
+      >台北雙星領銜 新北三大核心共榮優勢地段</div>
       <div class="msg"
         data-aos-once="false"
         data-aos="fade-up"
         data-aos-delay="0"
         data-aos-duration="800"
-      >「大都會水岸特區」環擁國家級重磅建設，<br v-if="isMobile" />往東，一橋相連與台北雙星特區共享商機，<br v-if="isMobile" />南向，新北第二行政中心『三重新市政特區』，<br v-if="isMobile" />西臨，新北產業園區＆新莊副都心，繁華緊鄰，<br v-if="isMobile" />北行，銀河灣計畫，水岸觀光娛樂、醫療新未來。
-
-      </div></div>
+      >
+      「大都會水岸特區」環擁雙北國家級重磅建設，<br v-if="isMobile" />
+      東以一橋之距與台北雙星特區共好共榮，<br />
+      跨步南向新北第二行政中心，打造三重新市政特區，<br v-if="isMobile" />
+      串聯西側新北產業園區以及新莊副都心，繁華隨享，<br />
+      連通北面銀河灣計畫，水岸觀光娛樂醫療新未來，<br v-if="isMobile" />
+      黃金四角正核心的關鍵位置，最好的願景都站在這裡！
+      </div>
     </section>
   </div>
 </template>
@@ -71,37 +82,24 @@ export default {
 .msg
   color: #fff
   // letter-spacing: 1.5px
-  border-left: 1px solid #fff
+  border: solid #fff
+  border-width: 0 1px
 
 @media screen and (min-width: $bp-pc)
   #sec4
     @include lish2pcW
     padding: 8vh 0
-  .txt
-    display: flex
-    justify-content: center
-    align-items: center
-    text-align: justify
-    margin-top: 3em
-    width: 114%
-    position: relative
-    left: -7%
 
   .title
-    margin: 0
-    white-space: nowrap
+    margin: 0 0 3vw
   .msg
-    margin-left: 3em
-    padding-left: 3em
+    margin-top: 3vw
 
 @media screen and (max-width: $bp-mb)
   #sec4
     margin-bottom: 20vw
-  .txt
-    width: 85%
-    margin: auto
   .title
-    margin: 10vw 0 3vw
+    margin: 10vw 0 5vw
   .msg
     border: none
     span

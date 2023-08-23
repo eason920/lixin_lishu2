@@ -27,8 +27,16 @@
     <vue-lazy-component class="section" id="section1" style="" @init="init">
       <S13 />
     </vue-lazy-component>
+    <!-- 
     <vue-lazy-component class="section" id="section2" @init="init">
       <S2 />
+    </vue-lazy-component>
+   -->
+    <vue-lazy-component class="section" id="section14" @init="init">
+      <S14 />
+    </vue-lazy-component>
+    <vue-lazy-component class="section" id="section15" @init="init">
+      <S15 />
     </vue-lazy-component>
     <vue-lazy-component class="section" id="section12" @init="init">
       <S12 />
@@ -94,6 +102,8 @@ import S10 from '@/projects/lishu2/S10.vue'
 import S11 from '@/projects/lishu2/S11.vue'
 import S12 from '@/projects/lishu2/S12.vue'
 import S13 from '@/projects/lishu2/S13.vue'
+import S14 from '@/projects/lishu2/S14.vue'
+import S15 from '@/projects/lishu2/S15.vue'
 
 export default {
   name: 'home',
@@ -109,6 +119,8 @@ export default {
     MClose,
     S13,
     S2,
+    S14,
+    S15,
     S12,
     S3,
     S4,

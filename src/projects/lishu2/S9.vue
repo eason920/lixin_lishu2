@@ -1,14 +1,6 @@
 <template>
   <div class="relative">
     <section id="sec9">
-      <h3
-        v-if="isMobile"
-        data-aos-once="false"
-        data-aos="fade-up"
-        data-aos-delay="0"
-        data-aos-duration="800"
-        data-aos-offset="0"><span class="en">STUCTURAL SAFTY</span>
-        <img loading="lazy" src="./S1/logo.png" /></h3>
       <div class="box">
         <div class="canvas_box"
           data-aos-once="false"
@@ -53,7 +45,7 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >結構工學堅若磐石 安心家園品質承諾</h2>
+        >結構堅若磐石 品質沈穩耐候</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
@@ -61,10 +53,8 @@
           data-aos-duration="800"
           data-aos-offset="0"
         >
-超越建築法規要求，以蓋超高樓層建築相同之嚴謹，<br/>
-送交結構外審，透過第三方公正單位把關，打造安心御邸；<br/>
-精密隔熱砂漿工法，恆久節能有效降低室內溫度，<br v-if="isMobile" />
-5年防水保固，<br/>專注方吋細節滴水不漏，確保居家生活品質。
+        超越建築法規要求，以蓋超高樓層建築相同之嚴謹，透過第三方公正單位把關，以使用者的態度蓋房子，精密隔熱砂漿工法，恆久節能有效降低室內溫度，5年防水保固，細節藏在每個方寸裡的用心。
+
         </p>
       </div>
     </section>

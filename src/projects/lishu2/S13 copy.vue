@@ -26,8 +26,35 @@
             <img src="./S13/subtitle.png" />
           </div>
         </div>
+
+        <div
+          data-aos-once="false"
+          data-aos="fade-up"
+          data-aos-delay="0"
+          data-aos-duration="2000"
+          class="bottom_water"
+        >
+          <img src="./S1/pc_water.png" />
+        </div>
+
         <div class="titleBox">
+          <div class="titleBox_logo"
+            data-aos-once="false"
+            data-aos="fade-in"
+            data-aos-delay="500"
+            data-aos-duration="1400"
+          >
+            <img src="./S13/pc_logo_left_bottom.png" />
+          </div>
           <div class="titleBox_info">
+            <div
+              data-aos-once="false"
+              data-aos="fade-in"
+              data-aos-delay="500"
+              data-aos-duration="1400"
+            >
+              <img class="titleBox_info_bisiness" src="./S13/bisiness.png" />
+            </div>
             <div class="titleBox_apoint">
               <div class="apoint"
                 data-aos-once="false"
@@ -65,6 +92,15 @@
         </div>
 
         <div class="titleBox">
+          <div
+            class="titleBox_bisiness"
+            data-aos-once="false"
+            data-aos="fade-up"
+            data-aos-delay="0"
+            data-aos-duration="2000"
+          >
+            <img src="./S13/bisiness.png" />
+          </div>
           <div
             class="titleBox_apoint"
             data-aos-once="false"
@@ -122,13 +158,13 @@
     // height: 56.25vw
     height: 100vh
     overflow: hidden
-    min-height: calc(100vw * 1000 / 1920)
-    max-height: calc(100vw * 1060 / 1920)
+    min-height: calc(100vw * 900 / 1920)
+    max-height: calc(100vw * 1080 / 1920)
     background:
       image: url(./S13/bg.jpg)
       size: cover
       color: #004A77
-      position: 50% 100%
+      position: 0
   .is_pc
     position: relative
     z-index: 3
@@ -146,21 +182,42 @@
 
     // --------------------------------
     .titleBox
-      justify-content: flex-end
+      justify-content: space-between
       padding:
-        bottom: 3vw
+        bottom: 2vw
         left: 3vw
         right: 3vw
       align-items: stretch
+    .titleBox_logo
+      display: flex
+      align-items: flex-end
+      img
+        height: 84%
 
     .titleBox_info
       display: flex
       z-index: 2
+    .titleBox_info_bisiness
+      width: 40vw // title height
+      margin:
+        right: 2vw
     .apoint
-      height: 6.3vw
+      height: 100%
       padding: 0 33px
     .title_box_img2
-      width:8.5vw
+      width: 10vw
+    .title_bg
+      height: 15vh
+      background-image: linear-gradient(to top,rgba(0,0,0,1) 20%, rgba(0,0,0,.5) 85%, rgba(0,0,0,0))
+      position: absolute
+      bottom: 0
+      z-index: 1
+      width: 100%
+    .bottom_water
+      position: absolute
+      bottom: -10px
+      img
+        width: 100%
 
 @media screen and (min-width: 1500px)
   #sec13
@@ -173,10 +230,10 @@
       image: url(./S13/bgm.jpg)
       size: cover
       color: #004A77
-      position: 50% 0
+      position: center
   .is_mb
     position: relative
-    height: calc(100vw * 555 / 375)
+    height: calc(100vw * 443 / 250)
     z-index: 3
     & > div
       position: absolute
@@ -195,18 +252,23 @@
     .titleBox
       flex-direction: column
       align-items: center
-      padding-bottom: 9vw
-      justify-content: flex-end
+      padding-bottom: 8vw
+
+    .titleBox_bisiness
+      width: 90%
+      margin-bottom: 20px
+      img
+        width: 100%
 
     .titleBox_apoint
       width: 100%
       display: flex
-      justify-content: flex-end
+      justify-content: center
     .apoint
-      width: 47.5%
+      width: 70%
       display: flex
       justify-content: center
-      padding: 3.6vw 0
+      padding: 5px 0
       background-color: rgba(0, 53, 85, 0)!important
 
     .title_box_img2
@@ -256,12 +318,12 @@
       width: 15px
       height: 15px
       right: 42vw
-      bottom: 48vw
+      bottom: 50vw
     &.is3
       width: 25px
       height: 25px
       right: 8vw
-      bottom: 60vw
+      bottom: 66vw
 
 </style>
 

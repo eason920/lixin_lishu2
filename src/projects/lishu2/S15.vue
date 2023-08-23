@@ -1,6 +1,6 @@
 <template>
   <div class="relative">
-    <section id="sec5">
+    <section id="sec15">
       <div class="box">
         <div class="canvas_box"
           data-aos-once="false"
@@ -10,82 +10,45 @@
         >
           <div class="pre" @click="prevBtn"></div>
           <div class="nxt" @click="nextBtn"></div>
-          <swiper :options="swiperOption" ref="swiper5">
-            <swiper-slide v-for="(item,i) in list" :key="'s5' + i">
-              <div class="gradient"></div>
-              <div class="msg">{{ item }}</div>
-            </swiper-slide>
+          <swiper :options="swiperOption" ref="swiper15">
+            <swiper-slide v-for="(item,i) in 9" :key="'s15' + i"></swiper-slide>
           </swiper>
-          <ul class="dot5" v-if="!isMobile">
-            <li
-              v-for="item in 3"
-              :key="'dot5' + item"
-              @click="fnDotChange(item)"
-            ></li>
-          </ul>
         </div>
-        <div class="static"
-        data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="0"
-        >
-          <div>
-            <img src="./S5/21.jpg" />
-            <div class="gradient"></div>
-            <div class="msg">新北環快</div>
-          </div>
-          <div>
-            <img src="./S5/22.jpg" />
-            <div class="gradient"></div>
-            <div class="msg">機場捷運A2a站示意圖</div>
-          </div>
-        </div>
+        <ul class="dot15" v-if="!isMobile">
+          <li
+            v-for="item in 9"
+            :key="'dot15' + item"
+            @click="fnDotChange(item)"
+          ></li>
+        </ul>
       </div>
       <div class="text">
-        <h3
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="0"
-          v-if="!isMobile"><span class="en">Transit<br />
-Oriented Development</span>
-          <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >一高三捷三快四橋<br>雙北最強交通網 雙捷極速增值中</h2>
+        >千金難買早知道，水岸必買要知道！</h2>
         <p
           data-aos-once="false"
           data-aos="fade-up"
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-        >
-        捷運A2a預定站：步行約3分鐘，秒速銜接台北雙星商圈，捷運A2三重站：3分鐘抵達、5分鐘直上中山高，捷運北環段Y19B站：已動工，士林大直一點都不遠，台64線、台65線、新北環快，三大高架快速道路，四大橋樑縱橫台北，中興橋、忠孝橋及台北橋等僅需6~9分鐘車程，高速快捷，超值首站『萊茵水花園』。
-
-        
-</p>
-        <h2
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="0"
-        >新北政府重金打造 三重水岸盛世啟動</h2>
-        <p
-          data-aos-once="false"
-          data-aos="fade-up"
-          data-aos-delay="0"
-          data-aos-duration="800"
-          data-aos-offset="0"
-        >透過「TOD都市發展計劃」，環狀線北環段Y19B捷運場域，一如東京品川車站，改變的地貌，創造生活的好境；果菜市場轉型文化都心，兼具觀光與文藝的「綠藝之丘」，【萊茵水花園】正蒙其利，啟動三重盛世的地景建築！
-
+        >關鍵：<br v-if="!isMobile" />
+三重大都會水岸特區，<br v-if="isMobile"/>掌握「一高三捷三快四橋」利多關鍵，更勝大直水岸。<br />
+遠見：<br v-if="!isMobile" />
+水岸首排是置產關鍵，<br v-if="isMobile"/>預購搶下生活榮景是遠見，水岸第一排穩坐增值首席。<br /><br />
+<span><b>新北首環，</b>河岸特區錢景同步台北</span>
+<span><b>水岸首排，</b>僅8.6%可開發爭藏中</span>
+<span><b>景觀契闊，</b>22米水漾路親水生態</span>
+<span><b>席位稀臻，</b>對位大直水岸豪漲經驗</span>
+<span><b>交通超順，</b>一高三捷三快四橋無敵</span>
+<span><b>國門首圈，</b>2站直達台北雙星特區</span>
+<span><b>團隊最強，</b>北環段TOD開發，Citylink</span>
+<span><b>公園大景，</b>睥睨16座大安森林公園</span>
+<span><b>增值首選，</b>重劃區起漲點首購必選</span>
         </p>
       </div>
     </section>
@@ -111,12 +74,6 @@ export default {
       bAddClass2: false,
       isMobile,
       vm: this,
-      list: [
-        '東京品川車站',
-        '東京六本木之丘｜TOD世界鼻祖國際城市',
-        '東京六本木之丘｜TOD世界鼻祖國際城市'
-        // some
-      ],
       swiperOption: {
         loop: true,
         breakpoints: {
@@ -140,18 +97,18 @@ export default {
           slideChangeTransitionStart: function() {
             let eq = this.activeIndex
             if (!isMobile) {
-              if (eq >= 3) {
-                eq = eq - 3
+              if (eq >= 9) {
+                eq = eq - 9
               }
-              $('.dot5 li')
+              $('.dot15 li')
                 .removeClass('active')
                 .eq(eq)
                 .addClass('active')
             } else {
-              if (eq >= 3) {
-                eq = eq - 3
+              if (eq >= 9) {
+                eq = eq - 9
               }
-              $('.dot5 li')
+              $('.dot15 li')
                 .removeClass('active')
                 .eq(eq)
                 .addClass('active')
@@ -164,17 +121,17 @@ export default {
 
   methods: {
     prevBtn() {
-      this.$refs.swiper5.$swiper.slidePrev()
+      this.$refs.swiper15.$swiper.slidePrev()
     },
     nextBtn() {
-      this.$refs.swiper5.$swiper.slideNext()
+      this.$refs.swiper15.$swiper.slideNext()
     },
     fnDotChange(i) {
       let eq = i - 1
-      if (eq >= 3) {
-        eq = eq - 3
+      if (eq >= 9) {
+        eq = eq - 9
       }
-      this.$refs.swiper5.$swiper.slideTo(eq)
+      this.$refs.swiper15.$swiper.slideTo(eq)
     },
     fnCCheck(i) {
       if (i === this.nCurrent) {
@@ -195,43 +152,61 @@ export default {
 @import src/assets/style/myvar
 
 $g: 5px
-#sec5
+#sec15
   display: flex
   color: #fff
+  p
+    text-align: justify
+    span
+      display: block
+      padding-left: 0
+      position: relative
+      margin-bottom: -1.5em
+      width: 16.5em
+      &:after
+
+        content: ""
+        display: inline-block
+        width: 10em
+        height: 1em
+      b
+        font-weight: 300
+        display: inline-block
+h3
+  text-align: left
+  letter-spacing: 0.03em
+  line-height: 1.35
+  margin-bottom: 1.5em
+  .en
+    font-size: 2.78em
+  img
+    display: block
+    width: 13em
+    margin: .2em 0 0 0
+    transform: scale3d(1,1,1.1)
 .text
-  width: 85vw
+  width: 90vw
   margin: 0 auto
   color: #fff
   .pic
-    width: 25vw
+    width: 18vw
     margin-bottom: 2vw
     img
       width: 100%
-  h3
-    text-align: left
-    letter-spacing: 0.03em
-    line-height: 1.35
-    margin-bottom: 1.5em
-    .en
-      font-size: 1.83em
-    img
-      display: block
-      width: 13em
-      margin: .2em 0 0 0
-      transform: scale3d(1,1,1.1)
   h2
     color: $yellow
 
 .box
   font-size: 0
-  overflow: hidden
+  // overflow: hidden
 
 @media screen and (min-width: $bp-pc)
   .box
-    width: 37vw
+    position: relative
+    width: 38vw
   .text
     border-left: solid 1px #fff
-    width: 35vw
+    width: 37vw
     padding:
       left: 3vw
     display: flex
@@ -241,9 +216,23 @@ $g: 5px
 @media screen and (max-width: $bp-mb)
   .box
     position: relative
+    margin-bottom: 7vw
 
   .pic
-    display: none
+    width: 45vw
+    margin:
+      left: 5vw
+      bottom: 5vw
+    img
+      width: 100%
+  h3
+    margin:
+      left: 5vw
+      bottom: 5vw
+    .en
+      font-size: 2.15em
+    img
+      width: 10.2em
 
 // ====================================
 // == CANVAS
@@ -283,14 +272,15 @@ $g: 5px
     transform: scale(1)
     opacity: 1
 @media screen and (min-width: $bp-pc)
-  #sec5
+  #sec15
     padding: 3vw 10vw 5vw
 
     h2
       text-align: left
+      font:
+        size: 1.5em
     p
       margin-top: 1.5vw
-      text-align: justify
       & + h2
         margin-top: 2vw
       span
@@ -298,7 +288,7 @@ $g: 5px
 
   $g: 2vw
 @media screen and (max-width: $bp-mb)
-  #sec5
+  #sec15
     flex-direction: column
     padding: 5vw 0
     h2
@@ -307,6 +297,11 @@ $g: 5px
         text-align: center
     p
       margin: 3vw 0 12vw
+      text-align: center
+      span
+        margin:0 auto -1.5em
+        text-align: justify
+
   .canvas0, .canvas
     margin-bottom: 12vw
 
@@ -334,14 +329,33 @@ $g: 5px
     size: contain
   position: relative
   background-repeat: no-repeat
-  &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(10)
-    background-image: url('./S5/3.jpg')
+  &:nth-child(1), &:nth-child(10)
+    background-image: url('./S15/1.jpg')
 
-  &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11)
-    background-image: url('./S5/1.jpg')
+  &:nth-child(2), &:nth-child(11)
+    background-image: url('./S15/2.jpg')
 
-  &:nth-child(3), &:nth-child(6), &:nth-child(9), &:nth-child(12)
-    background-image: url('./S5/2.jpg')
+  &:nth-child(3), &:nth-child(12)
+    background-image: url('./S15/3.jpg')
+
+  &:nth-child(4), &:nth-child(13)
+    background-image: url('./S15/4.jpg')
+
+  &:nth-child(5), &:nth-child(14)
+    background-image: url('./S15/5.jpg')
+
+  &:nth-child(6), &:nth-child(15)
+    background-image: url('./S15/6.jpg')
+
+  &:nth-child(7), &:nth-child(16)
+    background-image: url('./S15/7.jpg')
+
+  &:nth-child(8), &:nth-child(17)
+    background-image: url('./S15/8.jpg')
+
+  &:nth-child(9), &:nth-child(18)
+    background-image: url('./S15/9.jpg')
+
 .swiper-container
   z-index: 2
 @media screen and (min-width: $bp-pc)
@@ -349,18 +363,19 @@ $g: 5px
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 24.65vw // w * 0.562
+    height: 38.3vw // w * 0.562
 
   // w
   .swiper-container
     width:  100%
+
 
 @media screen and (max-width: $bp-mb)
   // h
   .swiper-container, // height
   .swiper-wrapper,
   .swiper-slide
-    height: 50.8vw // w * 2.87
+    height: 75.5vw // w * 2.87
 
   // w
   .swiper-container
@@ -405,6 +420,8 @@ $g: 5px
     image: url("./all/next-btn.png")
 
 @media screen and (min-width: $bp-pc)
+  .canvas_box
+    position: relative
   .pre,.nxt
     display: none
 
@@ -437,13 +454,13 @@ $g: 5px
 // dot
 $w: 10px
 @media screen and (min-width: $bp-pc)
-  .dot5
+  .dot15
     position: absolute
     z-index: 99
-    bottom: 15px
-    // left: 50%
-    left: 1vw
-    // transform: translateX(-50%)
+    bottom: -15px
+    left: 50%
+    // left: 1vw
+    transform: translateX(-50%)
     display: flex
     height: 6px
     li
@@ -459,7 +476,7 @@ $w: 10px
         background: #fff
 
 @media screen and (max-width: $bp-mb)
-  .dot5
+  .dot15
     display: none
 
 // ====================================
@@ -483,28 +500,4 @@ $w: 10px
   .msg
     font-size: 8px
 
-// ====================================
-// == STATIC PIC BOX
-// ====================================
-.static
-  display: flex
-  justify-content: space-between
-  margin-top: 8px
-  & > div
-    position: relative
-    &:nth-child(1)
-      width: calc(100%/6*4 - 4px)
-    &:nth-child(2)
-      width: calc(100%/6*2 - 4px)
-    img
-      width: 100%
-      height: 100%
-      object-fit: cover
-
-@media screen and (max-width: $bp-mb)
-  .static
-    width: 76vw
-    margin:
-      left: 12vw
-      bottom: 7vw
 </style>
