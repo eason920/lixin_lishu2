@@ -14,10 +14,10 @@
             <swiper-slide v-for="(item,i) in 3" :key="'s14' + i"></swiper-slide>
           </swiper>
         </div>
-        <ul class="dot6" v-if="!isMobile">
+        <ul class="dot14" v-if="!isMobile">
           <li
             v-for="item in 3"
-            :key="'dot6' + item"
+            :key="'dot14' + item"
             @click="fnDotChange(item)"
           ></li>
         </ul>
@@ -103,7 +103,7 @@ export default {
               if (eq >= 3) {
                 eq = eq - 3
               }
-              $('.dot6 li')
+              $('.dot14 li')
                 .removeClass('active')
                 .eq(eq)
                 .addClass('active')
@@ -111,7 +111,7 @@ export default {
               if (eq >= 3) {
                 eq = eq - 3
               }
-              $('.dot6 li')
+              $('.dot14 li')
                 .removeClass('active')
                 .eq(eq)
                 .addClass('active')
@@ -437,7 +437,7 @@ h3
 // dot
 $w: 10px
 @media screen and (min-width: $bp-pc)
-  .dot6
+  .dot14
     position: absolute
     z-index: 99
     bottom: -15px
@@ -459,7 +459,7 @@ $w: 10px
         background: #fff
 
 @media screen and (max-width: $bp-mb)
-  .dot6
+  .dot14
     display: none
 
 // ====================================
