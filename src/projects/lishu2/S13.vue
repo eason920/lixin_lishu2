@@ -108,11 +108,12 @@
   transition: .3s!important
   display: flex
   align-items: center
+  justify-content: center
   cursor: pointer
   background-color: rgba(0, 53, 85, 0)
   border:
     style: solid
-    width: 1px
+    width: 2px
     color: #fff!important
   &:hover
     background-color: rgba(0, 53, 85, 1)
@@ -147,20 +148,17 @@
     // --------------------------------
     .titleBox
       justify-content: flex-end
-      padding:
-        bottom: 3vw
-        left: 3vw
-        right: 3vw
+      padding: 0 3.65vw 6vw 0
       align-items: stretch
 
     .titleBox_info
       display: flex
       z-index: 2
     .apoint
-      height: 6.3vw
-      padding: 0 33px
+      height: 5.1vw
+      width: 27.2em
     .title_box_img2
-      width:8.5vw
+      width: 8.5vw
 
 @media screen and (min-width: 1500px)
   #sec13
@@ -203,11 +201,11 @@
       display: flex
       justify-content: flex-end
     .apoint
-      width: 47.5%
-      display: flex
-      justify-content: center
+      width: 9.2em
       padding: 3.6vw 0
       background-color: rgba(0, 53, 85, 0)!important
+      border:
+        width: 1px
 
     .title_box_img2
       width: 20vw
