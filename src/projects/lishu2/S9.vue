@@ -37,7 +37,7 @@
           data-aos-delay="0"
           data-aos-duration="800"
           data-aos-offset="0"
-          v-if="!isMobile"><span class="en">STUCTURAL SAFTY</span>
+          v-if="!isMobile"><span class="en">STUCTURAL SAFETY</span>
           <img loading="lazy" src="./S1/logo.png" /></h3>
         <h2
           data-aos-once="false"
