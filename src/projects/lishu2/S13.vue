@@ -199,9 +199,9 @@
     .titleBox_apoint
       width: 100%
       display: flex
-      justify-content: flex-end
+      justify-content: center
     .apoint
-      width: 9.2em
+      width: 24.2em
       padding: 3.6vw 0
       background-color: rgba(0, 53, 85, 0)!important
       border:

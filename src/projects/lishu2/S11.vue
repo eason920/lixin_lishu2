@@ -77,7 +77,7 @@
     top: 9vw
   .subtitle
     width: 30vw
-    bottom: 13vw
+    bottom: 19vw
 @media screen and (max-width: $bp-mb)
   #sec11
     height: 160vw
@@ -88,7 +88,7 @@
     top: 21vw
   .subtitle
     width: 80vw
-    bottom: 64vw
+    bottom: 75vw
 
 // ====================================
 // == ball
