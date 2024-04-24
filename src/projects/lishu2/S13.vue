@@ -148,15 +148,15 @@
     // --------------------------------
     .titleBox
       justify-content: flex-end
-      padding: 0 3.65vw 6vw 0
+      padding: 0 3.65vw 4.85vw 0
       align-items: stretch
 
     .titleBox_info
       display: flex
       z-index: 2
     .apoint
-      height: 5.1vw
-      width: 27.2em
+      height: 7.6vw
+      width: 31.2em
     .title_box_img2
       width: 8.5vw
 
